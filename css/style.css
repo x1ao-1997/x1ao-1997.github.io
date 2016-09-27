@@ -192,15 +192,15 @@ h1 {
   clear: both;
 }
 ::-webkit-input-placeholder {
-  color: #fff;
+  color: #ffc1c1;
   padding: 2px 0 0 4px;
 }
 ::-moz-placeholder {
-  color: #fff;
+  color: #ffc1c1;
   padding: 2px 0 0 4px;
 }
 :-ms-input-placeholder {
-  color: #fff;
+  color: #ffc1c1;
   padding: 2px 0 0 4px;
 }
 ::-webkit-input-placeholder::before {
@@ -233,7 +233,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: '\f00d';
-  color: #fff;
+  color: #ffc1c1;
   padding-right: 4px;
 }
 /* css3 animate */
@@ -368,7 +368,7 @@ body >header {
   -webkit-box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   box-shadow: 2px 4px 5px rgba(3,3,3,0.2);
   background: #ea6753;
-  color: #fff;
+  color: #ffc1c1;
   padding: 1em 0 0.8em;
 }
 @media only screen and (min-width: 1024px) {
@@ -389,7 +389,7 @@ body >header >div {
 }
 body >header a {
   display: block;
-  color: #fff;
+  color: #ffc1c1;
 }
 #imglogo {
   float: left;
@@ -522,7 +522,7 @@ header nav ul li a {
 }
 header nav ul li a:hover {
   background: #dd2c11;
-  color: #e9cd4c;
+  color: #ffc1c1;
 }
 .shownav {
   max-height: 40em;
@@ -532,8 +532,8 @@ header nav ul li a:hover {
 }
 .search input {
   line-height: 1.7;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #ffc1c1;
+  color: #ffc1c1;
   background: transparent;
   width: 80%;
   padding-left: 0.5em;
@@ -850,12 +850,12 @@ article .article-content .kb {
   border: 1px solid #ccc;
   background-color: code-color;
   color: #8f8f8f;
-  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #fff inset;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #fff inset;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #ffc1c1 inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2), 0 0 0 2px #ffc1c1 inset;
   border-radius: 3px;
   display: inline-block;
   margin: 0 0.1em;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #ffc1c1;
   line-height: 1.5;
   white-space: nowrap;
 }
@@ -1104,7 +1104,7 @@ footer.article-footer {
   margin-left: -0.75em;
 }
 .share a:hover:before {
-  color: #fff;
+  color: #ffc1c1;
 }
 .article-share-twitter:before {
   content: "\f099";
@@ -1149,7 +1149,7 @@ footer.article-footer {
   left: 50%;
   margin-top: -7.5em;
   margin-left: -7.5em;
-  background: #fff;
+  background: #ffc1c1;
   border: 2px solid #ccc;
   border-radius: 3px;
   display: inline-block;
@@ -1265,7 +1265,7 @@ footer.article-footer {
   background: #e6e6e6;
 }
 .article-tags a:hover {
-  color: #fff;
+  color: #ffc1c1;
   background: #2ca6cb;
 }
 .article-categories {
@@ -1283,7 +1283,7 @@ footer.article-footer {
   margin: 0 0.3em;
 }
 .article-category-link:hover {
-  color: #fff !important;
+  color: #ffc1c1 !important;
   background: #2ca6cb;
 }
 .article-nav {
@@ -1304,7 +1304,7 @@ footer.article-footer {
 .article-nav .prev a:hover,
 .article-nav .next a:hover {
   background: #2ca6cb;
-  color: #fff;
+  color: #ffc1c1;
 }
 .article-nav .prev {
   width: 100%;
@@ -1446,8 +1446,8 @@ section.comment {
 }
 .openaside a {
   display: block;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #ffc1c1;
+  border: 1px solid #ffc1c1;
   border-radius: 5px;
   background: #ea6753;
   padding: 0.2em 0.55em;
@@ -1587,7 +1587,7 @@ section.comment {
   }
 }
 .rsspart a {
-  color: #fff;
+  color: #ffc1c1;
   display: block;
   padding: 0.625em 0;
   text-align: center;
@@ -1741,7 +1741,7 @@ footer {
   display: block;
   width: 0.5em;
   height: 6.25em;
-  border-right: 0.125em solid #fff;
+  border-right: 0.125em solid #ffc1c1;
   margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
@@ -1788,7 +1788,7 @@ footer {
   line-height: 1.3em;
   width: 90%;
   margin: 0 auto;
-  color: #fff;
+  color: #ffc1c1;
 }
 @media only screen and (min-width: 768px) {
   .info {
@@ -1820,7 +1820,7 @@ footer {
   float: left;
   display: block;
   width: 14%;
-  color: #fff;
+  color: #ffc1c1;
   font-size: 180%;
   padding: 0.5em;
 }
@@ -1861,7 +1861,7 @@ footer {
   -moz-osx-font-smoothing: grayscale;
   font-family: "covered_by_your_graceregular";
   width: 100%;
-  color: #fff;
+  color: #ffc1c1;
   text-align: center;
 }
 @media only screen and (min-width: 768px) {
@@ -1870,7 +1870,7 @@ footer {
   }
 }
 .copyright a {
-  color: #fff;
+  color: #ffc1c1;
 }
 .copyright a:hover {
   color: #2ca6cb;
