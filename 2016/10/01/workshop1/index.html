@@ -100,7 +100,7 @@
 		<p>github静态博客搭建的收获体会、遇到的问题与进一步发展的方向<br><a id="more"></a></p>
 <h2 id="课程收获"><a href="#课程收获" class="headerlink" title="课程收获"></a>课程收获</h2><p><strong>一、创建了自己的静态博客</strong> <a href="https://x1ao-1997.github.io" target="_blank" rel="external">https://x1ao-1997.github.io</a><br><strong>二、安装更换主题<code>iceman</code></strong><br><img src="https://ooo.0o0.ooo/2016/10/05/57f4dd4860e28.png" alt="原始主题"><br><img src="https://ooo.0o0.ooo/2016/10/05/57f4dd4cbc2dc.png" alt="安装主题"></p>
 <blockquote>
-<p>主题（iceman）安装方法<code>`1.Install $ git clone https://github.com/wizicer/iceman.git themes/iceman</code><br><code>2.Install dependence</code><br><code>$ npm install hexo-renderer-ejs --save</code><br><code>$ npm install hexo-renderer-stylus --save</code><br><code>$ npm install hexo-renderer-marked --save</code><br><code>3.Enable Modify theme setting in blog folder_config.yml to iceman.</code><br><code>4.Update cd themes/iceman</code><br><code>git pull</code></p>
+<p>主题（iceman）安装方法<br><code>1.Install $ git clone https://github.com/wizicer/iceman.git themes/iceman</code><br><code>2.Install dependence</code><br><code>$ npm install hexo-renderer-ejs --save</code><br><code>$ npm install hexo-renderer-stylus --save</code><br><code>$ npm install hexo-renderer-marked --save</code><br><code>3.Enable Modify theme setting in blog folder_config.yml to iceman.</code><br><code>4.Update cd themes/iceman</code><br><code>git pull</code></p>
 <p>自定义主题色调（\themes\iceman\source\css_base\variable.styl）</p>
 <p>更改前<br>//Color<br>color-background = #C7D6D6<br>color-blue = #4fa6cb<br>color-theme = #458585<br>color-font-nav = #BEE5D2<br>color-footer = #333832</p>
 <p>更改后<br>//Color<br>color-background = ##FFFFFF<br>color-blue = #EED5B7<br>color-theme = #CDC9A5<br>color-font-nav = #CDBA96<br>color-footer = #FAFAD2 </p>
@@ -139,24 +139,21 @@ categories: github（添加一个）
 以下是文章内容
 </code></pre><p><img src="https://ooo.0o0.ooo/2016/10/05/57f4dec02bbc8.png" alt="Alt text"></p>
 <p><strong>六、增加评论功能（多说）</strong></p>
-<p>`<br>1.在根目录 _config.yml 添加一行 disqus_shortname: jslite （多说注册时产生）<br>2.复制到 themes\landscape\layout_partial\article.ejs<br>  把&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;<br>    <section id="comments"><br>    <div id="disqus_thread"><br>    <noscript>Please enable JavaScript to view the<br>    <ahref=" disqus.com="" ?ref_noscript"="">comments powered by    Disqus.<br>    </ahref="></noscript></div></section>&lt;% } %&gt;<br>    替换为<br>    &lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;<br>    <section id="comments"><br>    <!-- 多说评论框 start --><br>    <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div><br>    <!-- 多说评论框 end --><br>    <!-- 多说公共JS代码 start (一个网页只需插入一次) --><br>    <script type="text/javascript"><br>    var duoshuoQuery = {short_name:’&lt;%= config.disqus_shortname %&gt;’};<br>      (function() {<br>        var ds = document.createElement(‘script’);<br>        ds.type = ‘text/javascript’;ds.async = true;<br>        ds.src = (document.location.protocol == ‘https:’ ? ‘https:’ : ‘http:’) + ‘//static.duoshuo.com/embed.js’;<br>        ds.charset = ‘UTF-8’;<br>        (document.getElementsByTagName(‘head’)[0]<br>         || document.getElementsByTagName(‘body’)[0]).appendChild(ds);<br>      })();<br>      </script><br>    <!-- 多说公共JS代码 end --><br>  </section><br>&lt;% } %&gt;</p>
-<ol>
-<li><blockquote>
-<p>\themes\iceman_config.yml</p>
-</blockquote>
-</li>
-</ol>
 <blockquote>
+<p>1.在根目录 _config.yml 添加一行 disqus_shortname: jslite （多说注册时产生）<br>2.复制到 themes\landscape\layout_partial\article.ejs<br>  把&lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;<br>    <section id="comments"><br>    <div id="disqus_thread"><br>    <noscript>Please enable JavaScript to view the<br>    <ahref=" disqus.com="" ?ref_noscript"="">comments powered by    Disqus.<br>    </ahref="></noscript></div></section>&lt;% } %&gt;<br>    替换为<br>    &lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;<br>    <section id="comments"><br>    <!-- 多说评论框 start --><br>    <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div><br>    <!-- 多说评论框 end --><br>    <!-- 多说公共JS代码 start (一个网页只需插入一次) --><br>    <script type="text/javascript"><br>    var duoshuoQuery = {short_name:’&lt;%= config.disqus_shortname %&gt;’};<br>      (function() {<br>        var ds = document.createElement(‘script’);<br>        ds.type = ‘text/javascript’;ds.async = true;<br>        ds.src = (document.location.protocol == ‘https:’ ? ‘https:’ : ‘http:’) + ‘//static.duoshuo.com/embed.js’;<br>        ds.charset = ‘UTF-8’;<br>        (document.getElementsByTagName(‘head’)[0]<br>         || document.getElementsByTagName(‘body’)[0]).appendChild(ds);<br>      })();<br>      </script><br>    <!-- 多说公共JS代码 end --><br>  </section><br>&lt;% } %&gt;</p>
+<ol>
+<li>\themes\iceman_config.yml</li>
+</ol>
 <p>更改前<br>#### Comment<br>duoshuo:<br>  enable: true  ## duoshuo.com<br>  short_name:    ## duoshuo short name.</p>
 <p>更改后<br>#### Comment<br>duoshuo:<br>  enable: true  ## duoshuo.com<br>  short_name: x1ao-1997   ## duoshuo short name.</p>
 </blockquote>
 <p><img src="https://ooo.0o0.ooo/2016/10/05/57f4def843552.png" alt="Alt text"></p>
 <p><strong>七、使用Markdown语法写博客文章</strong><a href="https://x1ao-1997.github.io/2016/10/01/workshop1/" target="_blank" rel="external">https://x1ao-1997.github.io/2016/10/01/workshop1/</a><br><strong>八、在文章中插入图片、音频、超链接、书签等丰富文章表现形式</strong></p>
-<p>`<br> 一些基本的MArkdown语法：</p>
-<ol>
-<li>类 Atx 形式标题   # 这是 H1              ## 这是 H2               ###### 这是 H6</li>
-</ol>
+<blockquote>
+<p>一些基本的MArkdown语法：</p>
+</blockquote>
 <ul>
+<li>类 Atx 形式标题   # 这是 H1              ## 这是 H2               ###### 这是 H6</li>
 <li>区块引用 Blockquotes： 在每行的最前面加上 &gt;</li>
 <li>在 Markdown 中建立代码区块：  缩进 4 个空格或是 1 个制表符</li>
 <li>分割线 —</li>
@@ -165,7 +162,7 @@ categories: github（添加一个）
 <li>强调：用*或_包围字词</li>
 <li>标记代码：用反引号`将字词包围</li>
 <li>图片：<img src="https://ooo.0o0.ooo/2016/10/05/57f4e7494270a.png" alt="Alt text"></li>
-<li>反斜杠可帮助插入普通的符号<br>`</li>
+<li>反斜杠可帮助插入普通的符号</li>
 </ul>
 <h2 id="课程体会"><a href="#课程体会" class="headerlink" title="课程体会"></a>课程体会</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">在本次静态博客搭建课程的学习过程中，我遇到了不少的困难，但也收获颇丰。</div><div class="line">首先，在此次学习中，我学到了如何解决遇到的问题。群邮件给了我们一个沟通交流的平台，让我们能更好地帮助彼此解决困难、从彼此的问题中吸取经验。通过搜索工具、阅读他人博客等也是解决问题的方式途径。将曾经遇到的问题记下来，分析自己错误的原因，也能为之后的学习提供便利。</div><div class="line">其次，我学会了一种新的简单易懂的语法markdown，在使用中熟悉这种语言，了解它的使用规则技巧，尝试使用html等嵌套，并成功用这种语法写了一篇文章。</div><div class="line">当然，囿于时间与知识水平，我现在的博客还不够完善，还有许多地方需要在今后的学习中进一步完善。</div></pre></td></tr></table></figure>
 <h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><ul>
