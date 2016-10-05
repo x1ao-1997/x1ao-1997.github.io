@@ -100,21 +100,14 @@
 		<p>github静态博客搭建的收获体会、遇到的问题与进一步发展的方向<br><a id="more"></a></p>
 <h2 id="课程收获"><a href="#课程收获" class="headerlink" title="课程收获"></a>课程收获</h2><p><strong>一、创建了自己的静态博客</strong> <a href="https://x1ao-1997.github.io" target="_blank" rel="external">https://x1ao-1997.github.io</a><br><strong>二、安装更换主题<code>iceman</code></strong><br><img src="https://ooo.0o0.ooo/2016/10/05/57f4dd4860e28.png" alt="原始主题"><br><img src="https://ooo.0o0.ooo/2016/10/05/57f4dd4cbc2dc.png" alt="安装主题"></p>
 <p><code>主题（iceman）安装方法</code><br><code>Install $ git clone https://github.com/wizicer/iceman.git themes/iceman</code><br><code>Install dependence</code><br><code>$ npm install hexo-renderer-ejs --save</code><br><code>$ npm install hexo-renderer-stylus --save</code><br><code>$ npm install hexo-renderer-marked --save</code><br><code>Enable Modify theme setting in blog folder_config.yml to iceman.</code><br><code>Update cd themes/iceman</code><br><code>git pull</code></p>
-<p><code>自定义主题色调（\themes\iceman\source\css\_base\variable.styl）
-更改前
-//Color
-color-background = #C7D6D6
-color-blue = #4fa6cb 
-color-theme = #458585
-color-font-nav = #BEE5D2
-color-footer = #333832
-更改后
-//Color
-color-background = ##FFFFFF
-color-blue = #EED5B7
-color-theme = #CDC9A5
-color-font-nav = #CDBA96
-color-footer = #FAFAD2</code></p>
+<blockquote>
+<p>自定义主题色调（\themes\iceman\source\css_base\variable.styl）</p>
+<p>更改前<br>//Color<br>color-background = #C7D6D6<br>color-blue = #4fa6cb<br>color-theme = #458585<br>color-font-nav = #BEE5D2<br>color-footer = #333832</p>
+</blockquote>
+<p>更改后</p>
+<blockquote>
+<p>//Color<br>color-background = ##FFFFFF<br>color-blue = #EED5B7<br>color-theme = #CDC9A5<br>color-font-nav = #CDBA96<br>color-footer = #FAFAD2 </p>
+</blockquote>
 <p><strong>三、在主题中添加tags、categories等归档</strong></p>
 <p>`<br> \themes\iceman_config.yml </p>
 <p> 更改前<br> ##### Menu menu:<br> Home: /<br> Archives: /archives </p>
