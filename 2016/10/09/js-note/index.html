@@ -93,7 +93,7 @@ window.alert(5 + 6);
     </p>
   <p class="article-time">
     <time datetime="2016-10-09T07:06:10.000Z" itemprop="datePublished">2016-10-09</time>
-    更新日期:<time datetime="2016-10-09T08:05:12.851Z" itemprop="dateModified">2016-10-09</time>
+    更新日期:<time datetime="2016-10-09T08:45:54.305Z" itemprop="dateModified">2016-10-09</time>
     
   </p>
 </header>
@@ -108,41 +108,26 @@ window.alert(5 + 6);
 		
 		<h2 id="JavaScrip显示数据"><a href="#JavaScrip显示数据" class="headerlink" title="JavaScrip显示数据"></a>JavaScrip显示数据</h2><p>JavaScrip可以通过以下方式输出数据</p>
 <blockquote>
-<p>使用window.alert()弹出警告框</p>
+<p><strong>使用window.alert()弹出警告框</strong></p>
 <script>
 window.alert(5 + 6);
 </script>
 
 
-<p>使用document.write()方法将内容写到 HTML 文档中<br>操作HTML元素 如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。 </p>
+<p><strong>使用document.write()方法将内容写到 HTML 文档中</strong><br>操作HTML元素 如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。 </p>
 <script>
 document.getElementById("demo").innerHTML = "段落已修改。";
 </script>
 
 
-<p>写到HTML文档</p>
-<script>
-document.write(Date());
-</script>
-<button onclick="myFunction()">点我</button>
-
-
-请使用 document.write() 仅仅向文档输出写内容。
-如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
-<button onclick="myFunction()">点我</button>
-<script>
-function myFunction() 
-{
-document.write(Date());
-}
-</script>
-
-<p>使用 innerHTML 写入到 HTML 元素</p>
-<p>使用 console.log() 写入到浏览器的控制台<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>写到HTML文档</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">document.write(Date());</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div></pre></td></tr></table></figure></p>
+<p>请使用 document.write() 仅仅向文档输出写内容。<br>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() </div><div class="line">&#123;</div><div class="line">document.write(Date());</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>使用 innerHTML 写入到 HTML 元素</strong></p>
+<p><strong>使用 console.log() 写入到浏览器的控制台</strong><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h2><ul>
 <li><strong>数组（Array）字面量</strong>定义一个数组：[40, 100, 1, 5, 25, 10] </li>
-<li><strong>对象（Object）字面量</strong>定义一个对象：{firstName:”John”, lastName:”Doe”, age:50, eyeColor:”blue”} </li>
+<li><strong>对象（Object）字面量</strong>定义一个对象：{firstName:”John”, lastName:”Doe”, age:50, eyeColor:”blue”}<br>  可以通过person.lastName; person[“lastName”];  访问对象属性</li>
 <li><strong>函数（Function）字面量</strong>定义一个函数：function myFunction(a, b) { return a * b;} </li>
 <li><strong>变量</strong> JavaScript 使用关键字 var 来定义变量， 使用等号来为变量赋值：var x = 5 + 6;<br>  变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
 <li><strong>注释</strong> //我不会执行  多行注释以 /<em> 开始，以 </em>/ 结尾</li>
@@ -216,9 +201,17 @@ document.write(Date());
 </tbody>
 </table>
 <ul>
-<li><strong>折行</strong> 在文本字符串中使用反斜杠对代码行进行换行<br>  document.write(“你好 \<br>  世界!”);</li>
+<li><strong>折行</strong> 在文本字符串中使用反斜杠对代码行进行换行<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;你好 \</div><div class="line">`世界!&quot;);</div><div class="line"></div><div class="line">* **声明** var lastname=&quot;Doe&quot;, age=30, job=&quot;carpenter&quot;; </div><div class="line">声明也可以横跨多行：</div></pre></td></tr></table></figure>
+</li>
 </ul>
-  
+<p>var lastname=”Doe”,<br>age=30,<br>job=”carpenter”;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">## JavaScrip事件</div><div class="line">**HTML 事件**</div><div class="line">* 修改 id=&quot;demo&quot; 元素的内容</div></pre></td></tr></table></figure></p>
+<p><button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button></p>
+<p></p><p id="demo"></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 修改自身元素的内容 (使用 this.innerHTML)</div></pre></td></tr></table></figure><p></p>
+<p><button onclick="this.innerHTML=Date()">现在的时间是?</button><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 通过事件属性来调用</div></pre></td></tr></table></figure></p>
+<p><button onclick="displayDate()">点这里</button></p>
+<p><script><br>function displayDate(){<br>    document.getElementById(“demo”).innerHTML=Date();<br>}<br>```</p>
+<p><strong>常见的HTML事件</strong><br>|事件|描述|<br>|—-|—-|<br>|onchange|HTML 元素改变|<br>|onclick|用户点击 HTML 元素|<br>|onmouseover|用户在一个HTML元素上移动鼠标|<br>|onmouseout|用户从一个HTML元素上移开鼠标|<br>|onkeydown|用户按下键盘按键|<br>|onload|浏览器已完成页面的加载|<br>更多事件列表:  <img src="http://www.runoob.com/jsref/dom-obj-event.html" alt="HTML DOMO事件"></p>
+</script></p>  
 	</div>
 		<footer class="article-footer clearfix">
 
