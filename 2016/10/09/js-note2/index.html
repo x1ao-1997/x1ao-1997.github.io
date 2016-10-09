@@ -85,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-09T09:05:39.000Z" itemprop="datePublished">2016-10-09</time>
-    更新日期:<time datetime="2016-10-09T09:29:23.420Z" itemprop="dateModified">2016-10-09</time>
+    更新日期:<time datetime="2016-10-09T09:34:26.843Z" itemprop="dateModified">2016-10-09</time>
     
   </p>
 </header>
@@ -99,9 +99,17 @@
 		</div>
 		
 		<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><a id="more"></a>
-<h2 id="使用字符串方法"><a href="#使用字符串方法" class="headerlink" title="使用字符串方法"></a>使用字符串方法</h2><p><strong>语法</strong>  /pattern/modifiers;<br>    <strong>实例</strong>  var patt = /w3cschool/i</p>
-<p><strong>search() 方法</strong> 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。<br>    <strong>实例</strong>使用正则表达式搜索 “w3cschool” 字符串，且不区分大小写：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str = &quot;Visit w3cschool&quot;;</div><div class="line">   var n = str.search(/w3cschool/i); </div><div class="line"></div><div class="line">var str = &quot;Visit w3cschool!&quot;;</div><div class="line">   var n = str.search(&quot;w3cschool&quot;);</div></pre></td></tr></table></figure></p>
-<p><strong>replace() 方法</strong> 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。<br>    <strong>实例</strong>使用正则表达式且不区分大小写将字符串中的 Microsoft 替换为 w3cschool :<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var	str = &quot;Visit Microsoft!&quot;;</div><div class="line">   var res = str.replace(/microsoft/i, &quot;w3cschool&quot;); </div><div class="line"></div><div class="line">var str = &quot;Visit Microsoft!&quot;;</div><div class="line">   var res = str.replace(&quot;Microsoft&quot;, &quot;w3cschool&quot;);</div></pre></td></tr></table></figure></p>
+<h2 id="使用字符串方法"><a href="#使用字符串方法" class="headerlink" title="使用字符串方法"></a>使用字符串方法</h2><p><strong>语法</strong>  /pattern/modifiers;<br><strong>实例</strong>  var patt = /w3cschool/i</p>
+<p><strong>search() 方法</strong> 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。<br><strong>实例</strong>使用正则表达式搜索 “w3cschool” 字符串，且不区分大小写：</p>
+<blockquote>
+<p>var str = “Visit w3cschool”;<br>var n = str.search(/w3cschool/i); </p>
+<p>var str = “Visit w3cschool!”;<br>var n = str.search(“w3cschool”);</p>
+</blockquote>
+<p><strong>replace() 方法</strong> 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。<br>    <strong>实例</strong>使用正则表达式且不区分大小写将字符串中的 Microsoft 替换为 w3cschool :</p>
+<blockquote>
+<p>var    str = “Visit Microsoft!”;<br>var res = str.replace(/microsoft/i, “w3cschool”); </p>
+<p>var str = “Visit Microsoft!”;<br>var res = str.replace(“Microsoft”, “w3cschool”); </p>
+</blockquote>
 <p><strong>正则表达式修饰符</strong><br>修饰符 可以在全局搜索中不区分大小写:</p>
 <table>
 <thead>
@@ -201,8 +209,14 @@
 </tbody>
 </table>
 <h2 id="使用-RegExp-对象"><a href="#使用-RegExp-对象" class="headerlink" title="使用 RegExp 对象"></a>使用 RegExp 对象</h2><p>在 JavaScript 中，RegExp 对象是一个预定义了属性和方法的正则表达式对象。 </p>
-<h2 id="使用-test"><a href="#使用-test" class="headerlink" title="使用 test()"></a>使用 test()</h2><p>test() 方法是一个正则表达式方法。<br>test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。<br>以下实例用于搜索字符串中的字符 “e”：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var patt = /e/;</div><div class="line">patt.test(&quot;The best things in life are free!&quot;); </div><div class="line">//输出true</div></pre></td></tr></table></figure></p>
-<h2 id="使用-exec"><a href="#使用-exec" class="headerlink" title="使用 exec()"></a>使用 exec()</h2><p>exec() 方法是一个正则表达式方法。<br>exec() 方法用于检索字符串中的正则表达式的匹配。<br>该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。<br>以下实例用于搜索字符串中的字母 “e”:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/e/.exec(&quot;The best things in life are free!&quot;);</div><div class="line">//输出e</div></pre></td></tr></table></figure></p>
+<h2 id="使用-test"><a href="#使用-test" class="headerlink" title="使用 test()"></a>使用 test()</h2><p>test() 方法是一个正则表达式方法。<br>test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。<br>以下实例用于搜索字符串中的字符 “e”：</p>
+<blockquote>
+<p>var patt = /e/;<br>patt.test(“The best things in life are free!”);<br>//输出true</p>
+</blockquote>
+<h2 id="使用-exec"><a href="#使用-exec" class="headerlink" title="使用 exec()"></a>使用 exec()</h2><p>exec() 方法是一个正则表达式方法。<br>exec() 方法用于检索字符串中的正则表达式的匹配。<br>该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。<br>以下实例用于搜索字符串中的字母 “e”:</p>
+<blockquote>
+<p>/e/.exec(“The best things in life are free!”);<br>//输出e</p>
+</blockquote>
 <h2 id="完整的-RegExp-参考手册"><a href="#完整的-RegExp-参考手册" class="headerlink" title="完整的 RegExp 参考手册"></a>完整的 RegExp 参考手册</h2><p>[<a href="http://www.runoob.com/jsref/jsref-obj-regexp.html" target="_blank" rel="external">http://www.runoob.com/jsref/jsref-obj-regexp.html</a>]</p>
   
 	</div>
