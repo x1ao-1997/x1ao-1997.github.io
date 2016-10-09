@@ -12,9 +12,12 @@
     <meta name="description" content="JavaScrip显示数据JavaScrip可以通过以下方式输出数据
 
 使用window.alert()弹出警告框
-  123&amp;lt;script&amp;gt;   window.alert(5 + 6);   &amp;lt;/script&amp;gt;
 
-使用document.write()方法将内容写到 HTML">
+window.alert(5 + 6);
+
+
+
+使用document.write()方法将内容写到 HTML 文档中操作HTML元素 如需从 JavaScript 访问某个 HTML">
     
     
     
@@ -90,7 +93,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-09T07:06:10.000Z" itemprop="datePublished">2016-10-09</time>
-    更新日期:<time datetime="2016-10-09T07:50:45.725Z" itemprop="dateModified">2016-10-09</time>
+    更新日期:<time datetime="2016-10-09T08:05:12.851Z" itemprop="dateModified">2016-10-09</time>
     
   </p>
 </header>
@@ -104,71 +107,117 @@
 		</div>
 		
 		<h2 id="JavaScrip显示数据"><a href="#JavaScrip显示数据" class="headerlink" title="JavaScrip显示数据"></a>JavaScrip显示数据</h2><p>JavaScrip可以通过以下方式输出数据</p>
-<ul>
-<li><p>使用window.alert()弹出警告框</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   window.alert(5 + 6);</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用document.write()方法将内容写到 HTML 文档中</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">	** 操作HTML元素 如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。 </div><div class="line">	&lt;script&gt;</div><div class="line">    document.getElementById(&quot;demo&quot;).innerHTML = &quot;段落已修改。&quot;;</div><div class="line">    &lt;/script&gt;</div><div class="line">	** 写到HTML文档</div><div class="line">	&lt;script&gt;</div><div class="line">    document.write(Date());</div><div class="line">    &lt;/script&gt;</div><div class="line">	&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">    ** 请使用 document.write() 仅仅向文档输出写内容。</div><div class="line">    如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。</div><div class="line">	&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">    function myFunction() </div><div class="line">    &#123;</div><div class="line">        document.write(Date());</div><div class="line">    &#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用 innerHTML 写入到 HTML 元素</p>
-</li>
-<li>使用 console.log() 写入到浏览器的控制台  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
+<blockquote>
+<p>使用window.alert()弹出警告框</p>
+<script>
+window.alert(5 + 6);
+</script>
+
+
+<p>使用document.write()方法将内容写到 HTML 文档中<br>操作HTML元素 如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。 </p>
+<script>
+document.getElementById("demo").innerHTML = "段落已修改。";
+</script>
+
+
+<p>写到HTML文档</p>
+<script>
+document.write(Date());
+</script>
+<button onclick="myFunction()">点我</button>
+
+
+请使用 document.write() 仅仅向文档输出写内容。
+如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
+<button onclick="myFunction()">点我</button>
+<script>
+function myFunction() 
+{
+document.write(Date());
+}
+</script>
+
+<p>使用 innerHTML 写入到 HTML 元素</p>
+<p>使用 console.log() 写入到浏览器的控制台<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
 <h2 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h2><ul>
 <li><strong>数组（Array）字面量</strong>定义一个数组：[40, 100, 1, 5, 25, 10] </li>
 <li><strong>对象（Object）字面量</strong>定义一个对象：{firstName:”John”, lastName:”Doe”, age:50, eyeColor:”blue”} </li>
-<li><strong>函数（Function）字面量</strong>定义一个函数：function myFunction(a, b) { return a * b;}</li>
-<li></li>
-<li><strong>变量</strong> JavaScript 使用关键字 var 来定义变量， 使用等号来为变量赋值：var x = 5 + 6;</li>
-<li><strong>注释</strong> //我不会执行</li>
-<li><strong>字符集</strong> JavaScript 使用 Unicode 字符集<br><p>下表列出了 JavaScript 语句标识符 (关键字) ： </p><br>&lt;table class=”reference” “style=”width: 100%”&gt;<tr><br>  <th>语句</th><br>  <th>描述</th><br></tr>
-
-</li>
+<li><strong>函数（Function）字面量</strong>定义一个函数：function myFunction(a, b) { return a * b;} </li>
+<li><strong>变量</strong> JavaScript 使用关键字 var 来定义变量， 使用等号来为变量赋值：var x = 5 + 6;<br>  变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
+<li><strong>注释</strong> //我不会执行  多行注释以 /<em> 开始，以 </em>/ 结尾</li>
+<li><strong>字符集</strong> JavaScript 使用 Unicode 字符集</li>
+<li><strong>下表列出了 JavaScript 语句标识符 (关键字) ：</strong></li>
 </ul>
-<p><tr></tr></p>
-<p><td>break</td></p>
-<p><td>用于跳出循环。</td><br></p>
-<p><tr></tr></p>
-<p><td>catch</td></p>
-<p><td>语句块，在 try 语句块执行出错时执行 catch 语句块。</td><br></p>
-<p><tr></tr></p>
-<p><td>continue</td></p>
-<p><td>跳过循环中的一个迭代。</td><br></p>
-<p><tr></tr></p>
-<p><td>do … while</td></p>
-<p><td>执行一个语句块，在条件语句为 true 时继续执行该语句块。</td><br></p>
-<p><tr></tr></p>
-<p><td>for</td></p>
-<p><td>在条件语句为 true 时，可以将代码块执行指定的次数。 </td><br></p>
-<p><tr></tr></p>
-<p><td>for … in </td></p>
-<p><td>用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。</td><br></p>
-<p><tr></tr></p>
-<p><td>function</td></p>
-<p><td>定义一个函数</td><br></p>
-<p><tr></tr></p>
-<p><td>if … else</td></p>
-<p><td>用于基于不同的条件来执行不同的动作。</td><br></p>
-<p><tr></tr></p>
-<p><td>return</td></p>
-<p><td>退出函数</td><br></p>
-<p><tr></tr></p>
-<p><td>switch</td></p>
-<p><td>用于基于不同的条件来执行不同的动作。</td><br></p>
-<p><tr></tr></p>
-<p><td>throw</td></p>
-<p><td>抛出（生成）错误 。 </td><br></p>
-<p><tr></tr></p>
-<p><td>try</td></p>
-<p><td>实现错误处理，与 catch 一同使用。 </td><br></p>
-<p><tr></tr></p>
-<p><td>var</td></p>
-<p><td>声明一个变量。</td><br></p>
-<p><tr></tr></p>
-<p><td>while</td></p>
-<p><td>当条件语句为 true 时，执行语句块。 </td><br><br></p>
+<table>
+<thead>
+<tr>
+<th>语句</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>用于跳出循环。</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>语句块，在 try 语句块执行出错时执行 catch 语句块。</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>跳过循环中的一个迭代。</td>
+</tr>
+<tr>
+<td>do … while</td>
+<td>执行一个语句块，在条件语句为 true 时继续执行该语句块。</td>
+</tr>
+<tr>
+<td>for</td>
+<td>在条件语句为 true 时，可以将代码块执行指定的次数。</td>
+</tr>
+<tr>
+<td>for … in</td>
+<td>用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。</td>
+</tr>
+<tr>
+<td>function</td>
+<td>定义一个函数</td>
+</tr>
+<tr>
+<td>if … else</td>
+<td>用于基于不同的条件来执行不同的动作。</td>
+</tr>
+<tr>
+<td>return</td>
+<td>退出函数</td>
+</tr>
+<tr>
+<td>switch</td>
+<td>用于基于不同的条件来执行不同的动作。</td>
+</tr>
+<tr>
+<td>throw</td>
+<td>抛出（生成）错误 。</td>
+</tr>
+<tr>
+<td>try</td>
+<td>实现错误处理，与 catch 一同使用。</td>
+</tr>
+<tr>
+<td>var</td>
+<td>声明一个变量。</td>
+</tr>
+<tr>
+<td>while</td>
+<td>当条件语句为 true 时，执行语句块。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>折行</strong> 在文本字符串中使用反斜杠对代码行进行换行<br>  document.write(“你好 \<br>  世界!”);</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
