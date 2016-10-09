@@ -93,7 +93,7 @@ window.alert(5 + 6);
     </p>
   <p class="article-time">
     <time datetime="2016-10-09T07:06:10.000Z" itemprop="datePublished">2016-10-09</time>
-    更新日期:<time datetime="2016-10-09T09:11:58.028Z" itemprop="dateModified">2016-10-09</time>
+    更新日期:<time datetime="2016-10-09T09:14:52.933Z" itemprop="dateModified">2016-10-09</time>
     
   </p>
 </header>
@@ -103,7 +103,7 @@ window.alert(5 + 6);
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScrip显示数据"><span class="toc-number">1.</span> <span class="toc-text">JavaScrip显示数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript语法"><span class="toc-number">2.</span> <span class="toc-text">JavaScript语法</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScrip显示数据"><span class="toc-number">1.</span> <span class="toc-text">JavaScrip显示数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript语法"><span class="toc-number">2.</span> <span class="toc-text">JavaScript语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScrip事件"><span class="toc-number">3.</span> <span class="toc-text">JavaScrip事件</span></a></li></ol>
 		</div>
 		
 		<a id="more"></a>
@@ -124,7 +124,7 @@ document.getElementById("demo").innerHTML = "段落已修改。";
 <p><strong>写到HTML文档</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">document.write(Date());</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div></pre></td></tr></table></figure></p>
 <p>请使用 document.write() 仅仅向文档输出写内容。<br>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() </div><div class="line">&#123;</div><div class="line">document.write(Date());</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p><strong>使用 innerHTML 写入到 HTML 元素</strong></p>
-<p><strong>使用 console.log() 写入到浏览器的控制台</strong><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>使用 console.log() 写入到浏览器的控制台</strong><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">\&lt;script\&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   \&lt;\/script\&gt;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h2><ul>
 <li><strong>数组（Array）字面量</strong>定义一个数组：[40, 100, 1, 5, 25, 10] </li>
@@ -202,21 +202,31 @@ document.getElementById("demo").innerHTML = "段落已修改。";
 </tbody>
 </table>
 <ul>
-<li><strong>折行</strong> 在文本字符串中使用反斜杠对代码行进行换行<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;你好 \</div><div class="line">`世界!&quot;);</div><div class="line"></div><div class="line">* **声明** var lastname=&quot;Doe&quot;, age=30, job=&quot;carpenter&quot;; </div><div class="line">声明也可以横跨多行：</div></pre></td></tr></table></figure>
+<li><p><strong>折行</strong> 在文本字符串中使用反斜杠对代码行进行换行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;你好 \</div><div class="line">`世界!&quot;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>声明</strong> var lastname=”Doe”, age=30, job=”carpenter”;<br>声明也可以横跨多行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var lastname=&quot;Doe&quot;,</div><div class="line">age=30,</div><div class="line">job=&quot;carpenter&quot;;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>var lastname=”Doe”,<br>age=30,<br>job=”carpenter”;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">## JavaScrip事件</div><div class="line">**HTML 事件**</div><div class="line">* 修改 id=&quot;demo&quot; 元素的内容</div></pre></td></tr></table></figure></p>
-<p><button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button></p>
-<p></p><p id="demo"></p><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 修改自身元素的内容 (使用 this.innerHTML)</div></pre></td></tr></table></figure><p></p>
-<p><button onclick="this.innerHTML=Date()">现在的时间是?</button><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 通过事件属性来调用</div></pre></td></tr></table></figure></p>
-<p><button onclick="displayDate()">点这里</button></p>
-<p><script><br>function displayDate(){<br>    document.getElementById(“demo”).innerHTML=Date();<br>}<br>```</p>
+<h2 id="JavaScrip事件"><a href="#JavaScrip事件" class="headerlink" title="JavaScrip事件"></a>JavaScrip事件</h2><p><strong>HTML 事件</strong></p>
+<ul>
+<li><p>修改 id=”demo” 元素的内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;getElementById(&apos;demo&apos;).innerHTML=Date()&quot;&gt;现在的时间是?&lt;/button&gt;</div><div class="line">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改自身元素的内容 (使用 this.innerHTML)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;this.innerHTML=Date()&quot;&gt;现在的时间是?&lt;/button&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过事件属性来调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;displayDate()&quot;&gt;点这里&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function displayDate()&#123;</div><div class="line">	document.getElementById(&quot;demo&quot;).innerHTML=Date();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <p><strong>常见的HTML事件</strong><br>|事件|描述|<br>|—-|—-|<br>|onchange|HTML 元素改变|<br>|onclick|用户点击 HTML 元素|<br>|onmouseover|用户在一个HTML元素上移动鼠标|<br>|onmouseout|用户从一个HTML元素上移开鼠标|<br>|onkeydown|用户按下键盘按键|<br>|onload|浏览器已完成页面的加载|<br>更多事件列表:  <img src="http://www.runoob.com/jsref/dom-obj-event.html" alt="HTML DOMO事件"></p>
 <ul>
 <li><strong>typeof 操作符</strong>使用 typeof 操作符来检测变量的数据类型</li>
 <li><strong>Undefined 和 Null 的区别</strong><br>typeof undefined             // undefined<br>typeof null                  // object<br>null === undefined           // false<br>null == undefined            // true</li>
 </ul>
-</script></p>  
+  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -292,7 +302,7 @@ document.getElementById("demo").innerHTML = "段落已修改。";
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScrip显示数据"><span class="toc-number">1.</span> <span class="toc-text">JavaScrip显示数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript语法"><span class="toc-number">2.</span> <span class="toc-text">JavaScript语法</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScrip显示数据"><span class="toc-number">1.</span> <span class="toc-text">JavaScrip显示数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript语法"><span class="toc-number">2.</span> <span class="toc-text">JavaScript语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScrip事件"><span class="toc-number">3.</span> <span class="toc-text">JavaScrip事件</span></a></li></ol>
   </div>
 
 <div id="asidepart">
