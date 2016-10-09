@@ -85,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-09T07:06:10.000Z" itemprop="datePublished">2016-10-09</time>
-    更新日期:<time datetime="2016-10-09T09:31:49.260Z" itemprop="dateModified">2016-10-09</time>
+    更新日期:<time datetime="2016-10-09T09:38:31.623Z" itemprop="dateModified">2016-10-09</time>
     
   </p>
 </header>
@@ -101,7 +101,7 @@
 		<p>JavaScrip输出数据方式、基本语法、<br><a id="more"></a></p>
 <h2 id="JavaScrip显示数据"><a href="#JavaScrip显示数据" class="headerlink" title="JavaScrip显示数据"></a>JavaScrip显示数据</h2><p>JavaScrip可以通过以下方式输出数据</p>
 <blockquote>
-<p><strong>使用window.alert()弹出警告框</strong><br>\<script\><br>window.alert(5 + 6);<br>\</script\></p>
+<p><strong>使用window.alert()弹出警告框</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">**window.alert(5 + 6);**</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p><strong>使用document.write()方法将内容写到 HTML 文档中</strong><br>操作HTML元素 如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。 </p>
 <script>
 document.getElementById("demo").innerHTML = "段落已修改。";
@@ -111,7 +111,7 @@ document.getElementById("demo").innerHTML = "段落已修改。";
 <p><strong>写到HTML文档</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">document.write(Date());</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div></pre></td></tr></table></figure></p>
 <p>请使用 document.write() 仅仅向文档输出写内容。<br>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;button onclick=&quot;myFunction()&quot;&gt;点我&lt;/button&gt;</div><div class="line">&lt;script&gt;</div><div class="line">function myFunction() </div><div class="line">&#123;</div><div class="line">document.write(Date());</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p><strong>使用 innerHTML 写入到 HTML 元素</strong></p>
-<p><strong>使用 console.log() 写入到浏览器的控制台</strong><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">\&lt;script\&gt;</div><div class="line">   a = 5;</div><div class="line">   b = 6;</div><div class="line">   c = a + b;</div><div class="line">   console.log(c);</div><div class="line">   \&lt;\/script\&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>使用 console.log() 写入到浏览器的控制台</strong><br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">a = 5;</div><div class="line">b = 6;</div><div class="line">c = a + b;</div><div class="line">console.log(c);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h2><ul>
 <li><strong>数组（Array）字面量</strong>定义一个数组：[40, 100, 1, 5, 25, 10] </li>
@@ -190,7 +190,7 @@ document.getElementById("demo").innerHTML = "段落已修改。";
 </table>
 <ul>
 <li><p><strong>折行</strong> 在文本字符串中使用反斜杠对代码行进行换行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;你好 \</div><div class="line">`世界!&quot;);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">document.write(&quot;你好 \</div><div class="line">世界!&quot;);</div></pre></td></tr></table></figure>
 </li>
 <li><p><strong>声明</strong> var lastname=”Doe”, age=30, job=”carpenter”;<br>声明也可以横跨多行：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var lastname=&quot;Doe&quot;,</div><div class="line">age=30,</div><div class="line">job=&quot;carpenter&quot;;</div></pre></td></tr></table></figure>
