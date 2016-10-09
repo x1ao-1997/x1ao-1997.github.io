@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | ❤x1ao-1997✔s blog🐀</title>
+    <title>JavaScrip学习笔记2 | ❤x1ao-1997✔s blog🐀</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiao ying">
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+    <meta name="description" content="正则表达式">
     
     
     
@@ -77,15 +77,15 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/25/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2016/10/09/js-note2/" title="JavaScrip学习笔记2" itemprop="url">JavaScrip学习笔记2</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://yoursite.com" title="xiao ying">xiao ying</a>
     </p>
   <p class="article-time">
-    <time datetime="2016-09-25T10:42:11.599Z" itemprop="datePublished">2016-09-25</time>
-    更新日期:<time datetime="2016-10-05T14:41:57.425Z" itemprop="dateModified">2016-10-05</time>
+    <time datetime="2016-10-09T09:05:39.000Z" itemprop="datePublished">2016-10-09</time>
+    更新日期:<time datetime="2016-10-09T09:11:55.823Z" itemprop="dateModified">2016-10-09</time>
     
   </p>
 </header>
@@ -95,22 +95,28 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式"><span class="toc-number">1.</span> <span class="toc-text">正则表达式</span></a></li></ol>
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><a id="more"></a>
+<p><strong>语法</strong>  /pattern/modifiers;<br>    <strong>实例</strong>  var patt = /w3cschool/i</p>
+<p><strong>search() 方法</strong> 用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串，并返回子串的起始位置。<br>    <strong>实例</strong>使用正则表达式搜索 “w3cschool” 字符串，且不区分大小写：<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str = &quot;Visit w3cschool&quot;;</div><div class="line">   var n = str.search(/w3cschool/i); </div><div class="line"></div><div class="line">var str = &quot;Visit w3cschool!&quot;;</div><div class="line">   var n = str.search(&quot;w3cschool&quot;);</div></pre></td></tr></table></figure></p>
+<p><strong>replace() 方法</strong> 用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。<br>    <strong>实例</strong>使用正则表达式且不区分大小写将字符串中的 Microsoft 替换为 w3cschool :<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var	str = &quot;Visit Microsoft!&quot;;</div><div class="line">   var res = str.replace(/microsoft/i, &quot;w3cschool&quot;); </div><div class="line"></div><div class="line">var str = &quot;Visit Microsoft!&quot;;</div><div class="line">   var res = str.replace(&quot;Microsoft&quot;, &quot;w3cschool&quot;);</div></pre></td></tr></table></figure></p>
+<p><strong>正则表达式修饰符</strong><br>修饰符 可以在全局搜索中不区分大小写:<br>|修饰符|描述|<br>|——|—-|<br>|i|执行对大小写不敏感的匹配|<br>|g|执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。|<br>|m|执行多行匹配。|<br><strong>正则表达式模式</strong><br>方括号用于查找某个范围内的字符：<br>|表达式|描述|<br>|——|—-|<br>|[abc]|查找方括号之间的任何字符。|<br>|[0-9]|查找任何从 0 至 9 的数字。|<br>|(x|y)|查找任何以 | 分隔的选项。 |<br>元字符是拥有特殊含义的字符：<br>|元字符|描述|<br>|||<br>|\d|查找数字。|<br>|\s|查找空白字符。|<br>|\b|匹配单词边界。|<br>|\uxxxx|查找以十六进制数 xxxx 规定的 Unicode 字符。|<br>量词<br>|量词|描述|<br>|—-|—-|<br>|n+|匹配任何包含至少一个 n 的字符串。|<br>|n*|匹配任何包含零个或多个 n 的字符串。 |<br>|n?|匹配任何包含零个或一个 n 的字符串。|</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/JavaScrip/">JavaScrip</a><a href="/tags/LearningNote/">LearningNote</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../categories/JavaScrip/">JavaScrip</a>
+</div>
 
 
 
@@ -144,14 +150,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/10/01/workshop1/" title="workshop1">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  workshop1</span>
+
+<div class="next">
+<a href="/2016/10/09/js-note/"  title="JavaScrip学习笔记1">
+ <strong>NEXT:</strong><br/> 
+ <span>JavaScrip学习笔记1
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -165,7 +171,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#正则表达式"><span class="toc-number">1.</span> <span class="toc-text">正则表达式</span></a></li></ol>
   </div>
 
 <div id="asidepart">
