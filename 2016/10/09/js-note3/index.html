@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>js note3 | ❤x1ao-1997✔s blog🐀</title>
+    <title>JavaScrip学习笔记3 | ❤x1ao-1997✔s blog🐀</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="xiao ying">
+    
+    <meta name="description" content="JavaScrip计时事件">
     
     
     
@@ -75,7 +77,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/09/js-note3/" title="js note3" itemprop="url">js note3</a>
+      <a href="/2016/10/09/js-note3/" title="JavaScrip学习笔记3" itemprop="url">JavaScrip学习笔记3</a>
   </h1>
   <p class="article-author">By
     
@@ -83,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-09T09:49:33.000Z" itemprop="datePublished">2016-10-09</time>
-    更新日期:<time datetime="2016-10-09T09:49:33.964Z" itemprop="dateModified">2016-10-09</time>
+    更新日期:<time datetime="2016-10-11T11:19:37.115Z" itemprop="dateModified">2016-10-11</time>
     
   </p>
 </header>
@@ -93,13 +95,32 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#setInterval-方法"><span class="toc-number">1.</span> <span class="toc-text">setInterval()方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#setTimeout-方法"><span class="toc-number">2.</span> <span class="toc-text">setTimeout() 方法</span></a></li></ol>
 		</div>
 		
-		  
+		<p>JavaScrip计时事件<br><a id="more"></a><br>通过使用 JavaScript，我们有能力作到在一个设定的时间间隔之后来执行代码，而不是在函数被调用后立即执行。我们称之为计时事件。<br>在 JavaScritp 中使用计时事件是很容易的，两个关键方法是:</p>
+<ul>
+<li>setInterval() - 间隔指定的毫秒数不停地执行指定的代码。</li>
+<li>setTimeout() - 暂停指定的毫秒数后执行指定的代码</li>
+</ul>
+<h2 id="setInterval-方法"><a href="#setInterval-方法" class="headerlink" title="setInterval()方法"></a>setInterval()方法</h2><p><strong>语法</strong>window.setInterval(“javascript function”,milliseconds);<br>window.setInterval() 方法可以不使用window前缀，直接使用函数setInterval()。<br>setInterval() 第一个参数是函数（function）。<br>第二个参数间隔的毫秒数 注意: 1000 毫秒是一秒。</p>
+<p>停止执行<br><strong>语法</strong>window.clearInterval(intervalVariable)<br>window.clearInterval() 方法可以不使用window前缀，直接使用函数clearInterval()。<br>要使用 clearInterval() 方法, 在创建计时方法时你必须使用全局变量：<br>myVar=setInterval(“javascript function”,milliseconds);</p>
+<h2 id="setTimeout-方法"><a href="#setTimeout-方法" class="headerlink" title="setTimeout() 方法"></a>setTimeout() 方法</h2><p><strong>语法</strong> window.setTimeout(“javascript 函数”,毫秒数);<br>setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。<br>setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 “alert(‘5 seconds!’)”，或者对函数的调用，诸如 alertMsg()”。<br>第二个参数指示从当前起多少毫秒后执行第一个参数。</p>
+<p>停止执行<br><strong>语法</strong><br>window.clearTimeout(timeoutVariable)<br>window.clearTimeout() 方法可以不使用window 前缀。<br>要使用clearTimeout() 方法, 你必须在创建超时方法中（setTimeout）使用全局变量:<br>myVar=setTimeout(“javascript function”,milliseconds);<br>如果函数还未被执行，你可以使用 clearTimeout() 方法来停止执行函数代码。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/JavaScrip/">JavaScrip</a><a href="/tags/LearningNote/">LearningNote</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../categories/JavaScrip/">JavaScrip</a>
+</div>
 
 
 
@@ -162,7 +183,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#setInterval-方法"><span class="toc-number">1.</span> <span class="toc-text">setInterval()方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#setTimeout-方法"><span class="toc-number">2.</span> <span class="toc-text">setTimeout() 方法</span></a></li></ol>
   </div>
 
 <div id="asidepart">
@@ -183,7 +204,7 @@
 		
 			<li><a href="/categories/HTML/" title="HTML">HTML<sup>1</sup></a></li>
 		
-			<li><a href="/categories/JavaScrip/" title="JavaScrip">JavaScrip<sup>3</sup></a></li>
+			<li><a href="/categories/JavaScrip/" title="JavaScrip">JavaScrip<sup>4</sup></a></li>
 		
 			<li><a href="/categories/github/" title="github">github<sup>1</sup></a></li>
 		
@@ -198,9 +219,9 @@
 		
 			<li><a href="/tags/HTML/" title="HTML">HTML<sup>1</sup></a></li>
 		
-			<li><a href="/tags/JavaScrip/" title="JavaScrip">JavaScrip<sup>3</sup></a></li>
+			<li><a href="/tags/JavaScrip/" title="JavaScrip">JavaScrip<sup>4</sup></a></li>
 		
-			<li><a href="/tags/LearningNote/" title="LearningNote">LearningNote<sup>3</sup></a></li>
+			<li><a href="/tags/LearningNote/" title="LearningNote">LearningNote<sup>4</sup></a></li>
 		
 			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
 		
