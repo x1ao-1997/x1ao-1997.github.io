@@ -9,7 +9,7 @@
     
     <meta name="author" content="xiao ying">
     
-    <meta name="description" content="表单">
+    <meta name="description" content="HTML表单   CSS display 和visbility特性">
     
     
     
@@ -85,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-11T07:18:06.000Z" itemprop="datePublished">2016-10-11</time>
-    更新日期:<time datetime="2016-10-11T08:41:04.397Z" itemprop="dateModified">2016-10-11</time>
+    更新日期:<time datetime="2016-10-11T09:15:54.265Z" itemprop="dateModified">2016-10-11</time>
     
   </p>
 </header>
@@ -95,10 +95,10 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单"><span class="toc-number">1.</span> <span class="toc-text">表单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用元素创建表单的方式"><span class="toc-number">1.1.</span> <span class="toc-text">使用元素创建表单的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单控件"><span class="toc-number">1.2.</span> <span class="toc-text">表单控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素为控件创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">利用元素为控件创建标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素和元素结构化表单"><span class="toc-number">1.4.</span> <span class="toc-text">利用元素和元素结构化表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#焦点"><span class="toc-number">1.5.</span> <span class="toc-text">焦点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁用的或只读的控件"><span class="toc-number">1.6.</span> <span class="toc-text">禁用的或只读的控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向服务器发送表单数据"><span class="toc-number">1.7.</span> <span class="toc-text">向服务器发送表单数据</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML表单-CSS-display-和visbility特性"><span class="toc-number">1.</span> <span class="toc-text">HTML表单   CSS display 和visbility特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用元素创建表单的方式"><span class="toc-number">1.1.</span> <span class="toc-text">使用元素创建表单的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单控件"><span class="toc-number">1.2.</span> <span class="toc-text">表单控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素为控件创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">利用元素为控件创建标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素和元素结构化表单"><span class="toc-number">1.4.</span> <span class="toc-text">利用元素和元素结构化表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#焦点"><span class="toc-number">1.5.</span> <span class="toc-text">焦点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁用的或只读的控件"><span class="toc-number">1.6.</span> <span class="toc-text">禁用的或只读的控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向服务器发送表单数据"><span class="toc-number">1.7.</span> <span class="toc-text">向服务器发送表单数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-display属性和visibility特性"><span class="toc-number">1.8.</span> <span class="toc-text">CSS display属性和visibility特性</span></a></li></ol></li></ol>
 		</div>
 		
-		<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><a id="more"></a>
+		<h1 id="HTML表单-CSS-display-和visbility特性"><a href="#HTML表单-CSS-display-和visbility特性" class="headerlink" title="HTML表单   CSS display 和visbility特性"></a>HTML表单   CSS display 和visbility特性</h1><a id="more"></a>
 <p>本章学习笔记主要是为了创建完善网站登录框，一些不太相关内容则不加赘述。</p>
 <h2 id="使用元素创建表单的方式"><a href="#使用元素创建表单的方式" class="headerlink" title="使用元素创建表单的方式"></a><strong>使用<form>元素创建表单的方式</form></strong></h2><ul>
 <li>页面中的<form>元素相互独立</form></li>
@@ -213,7 +213,12 @@
 <li><strong>隐藏控件</strong><br>使用方法：使用<input>元素，该元素的type属性值需要设置为hidden。<br>隐藏表单控件的名称和值仍然能够发送给服务器，此时隐藏表单控件必须附带name属性和value属性<br>也可以利用CSS的display属性和visibility特性隐藏表单控件</li>
 <li><strong>对象控件</strong></li>
 </ul>
-<h2 id="利用元素为控件创建标签"><a href="#利用元素为控件创建标签" class="headerlink" title="利用元素为控件创建标签"></a>利用<label>元素为控件创建标签</label></h2><h2 id="利用元素和元素结构化表单"><a href="#利用元素和元素结构化表单" class="headerlink" title="利用元素和元素结构化表单"></a>利用<fieldset>元素和<legend>元素结构化表单</legend></fieldset></h2><h2 id="焦点"><a href="#焦点" class="headerlink" title="焦点"></a>焦点</h2><h2 id="禁用的或只读的控件"><a href="#禁用的或只读的控件" class="headerlink" title="禁用的或只读的控件"></a>禁用的或只读的控件</h2><h2 id="向服务器发送表单数据"><a href="#向服务器发送表单数据" class="headerlink" title="向服务器发送表单数据"></a>向服务器发送表单数据</h2><p>参考书籍《Web编程入门经典》</p>
+<h2 id="利用元素为控件创建标签"><a href="#利用元素为控件创建标签" class="headerlink" title="利用元素为控件创建标签"></a>利用<label>元素为控件创建标签</label></h2><h2 id="利用元素和元素结构化表单"><a href="#利用元素和元素结构化表单" class="headerlink" title="利用元素和元素结构化表单"></a>利用<fieldset>元素和<legend>元素结构化表单</legend></fieldset></h2><h2 id="焦点"><a href="#焦点" class="headerlink" title="焦点"></a>焦点</h2><h2 id="禁用的或只读的控件"><a href="#禁用的或只读的控件" class="headerlink" title="禁用的或只读的控件"></a>禁用的或只读的控件</h2><h2 id="向服务器发送表单数据"><a href="#向服务器发送表单数据" class="headerlink" title="向服务器发送表单数据"></a>向服务器发送表单数据</h2><h2 id="CSS-display属性和visibility特性"><a href="#CSS-display属性和visibility特性" class="headerlink" title="CSS display属性和visibility特性"></a>CSS display属性和visibility特性</h2><ul>
+<li><strong>display特性</strong><br>将元素或框强制为与用户期望类型不同的框</li>
+<li><strong>visibility特性</strong><br>可用于隐藏框，使其不可见，但是框仍然会影响页面的布局</li>
+</ul>
+<p><strong>隐藏元素 - display:none或visibility:hidden</strong><br>隐藏一个元素可以通过把display属性设置为”none”，或把visibility属性设置为”hidden”。但是请注意，这两种方法会产生不同的结果。<br>visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。</p>
+<p>参考书籍《Web编程入门经典》</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -282,7 +287,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#表单"><span class="toc-number">1.</span> <span class="toc-text">表单</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用元素创建表单的方式"><span class="toc-number">1.1.</span> <span class="toc-text">使用元素创建表单的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单控件"><span class="toc-number">1.2.</span> <span class="toc-text">表单控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素为控件创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">利用元素为控件创建标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素和元素结构化表单"><span class="toc-number">1.4.</span> <span class="toc-text">利用元素和元素结构化表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#焦点"><span class="toc-number">1.5.</span> <span class="toc-text">焦点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁用的或只读的控件"><span class="toc-number">1.6.</span> <span class="toc-text">禁用的或只读的控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向服务器发送表单数据"><span class="toc-number">1.7.</span> <span class="toc-text">向服务器发送表单数据</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML表单-CSS-display-和visbility特性"><span class="toc-number">1.</span> <span class="toc-text">HTML表单   CSS display 和visbility特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用元素创建表单的方式"><span class="toc-number">1.1.</span> <span class="toc-text">使用元素创建表单的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单控件"><span class="toc-number">1.2.</span> <span class="toc-text">表单控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素为控件创建标签"><span class="toc-number">1.3.</span> <span class="toc-text">利用元素为控件创建标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用元素和元素结构化表单"><span class="toc-number">1.4.</span> <span class="toc-text">利用元素和元素结构化表单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#焦点"><span class="toc-number">1.5.</span> <span class="toc-text">焦点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#禁用的或只读的控件"><span class="toc-number">1.6.</span> <span class="toc-text">禁用的或只读的控件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#向服务器发送表单数据"><span class="toc-number">1.7.</span> <span class="toc-text">向服务器发送表单数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-display属性和visibility特性"><span class="toc-number">1.8.</span> <span class="toc-text">CSS display属性和visibility特性</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
