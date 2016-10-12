@@ -85,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-10T02:52:02.000Z" itemprop="datePublished">2016-10-10</time>
-    更新日期:<time datetime="2016-10-11T13:26:36.920Z" itemprop="dateModified">2016-10-11</time>
+    更新日期:<time datetime="2016-10-12T09:40:58.053Z" itemprop="dateModified">2016-10-12</time>
     
   </p>
 </header>
@@ -95,7 +95,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#底部模块问题"><span class="toc-number">1.1.</span> <span class="toc-text">底部模块问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#登录框问题"><span class="toc-number">1.2.</span> <span class="toc-text">登录框问题</span></a></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#底部模块问题"><span class="toc-number">1.1.</span> <span class="toc-text">底部模块问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#登录框问题"><span class="toc-number">1.2.</span> <span class="toc-text">登录框问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#收获体会"><span class="toc-number">2.</span> <span class="toc-text">收获体会</span></a></li></ol>
 		</div>
 		
 		<p>仿淘宝登录页面编写的收获体会、遇到的问题<br><a id="more"></a></p>
@@ -109,15 +109,23 @@
 <h3 id="登录框问题"><a href="#登录框问题" class="headerlink" title="登录框问题"></a>登录框问题</h3><ul>
 <li>警示框选用class=”alert alert-danger”时，文字无法实现居中<br>解决办法：改用class=”alert-danger”添加border并设置width color而不是color</li>
 <li>不填用户名密码点击登陆时出现提示这是必填字段且输入框变红加粗<br>错误原因：在<input>中误加required<br>解决办法：删掉required即可</li>
-<li>提示：not found udLog()<br>错误原因：html没有与js关联<br><strong>参考网页</strong><br>Bootstrap字体图标(Glyphicons) [<a href="http://www.runoob.com/bootstrap/bootstrap-glyphicons.html" target="_blank" rel="external">http://www.runoob.com/bootstrap/bootstrap-glyphicons.html</a>]</li>
+<li>提示：not found udLog()<br>错误原因：html没有与js关联</li>
+<li>提示框一闪而过<br>解决办法：在botton的声明中加入type=”botton”</li>
+<li>使用调用setTimeout函数setTimeout(warn1open(),200);时没有延时效果<br>错误原因：调用方法错误<br>解决办法：setTimeout(function(){warn1open();},200);</li>
 </ul>
+<h2 id="收获体会"><a href="#收获体会" class="headerlink" title="收获体会"></a>收获体会</h2><ul>
+<li>通过此次课程的学习，我对html、css、javascrip等语言有了初步的了解，并较为成功地完成了仿淘宝登陆页面的搭建。</li>
+<li>初次学习运用这几种语言，感觉上手不叫容易，但要熟练运用并不是一件容易的事情，基本框架的搭建还算比较轻松，但是当遇到一些细节的时候常常不知道改运用什么属性函数方法，感觉无从下手，所以为了更好地利用这门语言还需要进一步的学习。</li>
+<li>由于时间有限，我的网页还不是很完善，还有许多地方可以改进：<br>1.可以尝试使用JavaScript 库简化代码。<br>2.登录的提示警告框我是用的是display的方法，显示提示框的同时改变登陆框的高度。还可以尝试利用visibi特性。<br>3.可以尝试点击登录按钮后将信息传送给服务器。<br>4.用户和密码的图标与所给图片上并不相同，可以尝试改变。<br>5.可以将CSS规划一下，增强可读性，保证代码可靠性。<br>6.可以把淘宝的logo加上</li>
+</ul>
+<p><strong>参考网页</strong><br>Bootstrap字体图标(Glyphicons) [<a href="http://www.runoob.com/bootstrap/bootstrap-glyphicons.html" target="_blank" rel="external">http://www.runoob.com/bootstrap/bootstrap-glyphicons.html</a>]<br><strong>参考书籍</strong><br>Web编程入门经典——HTML、XHTML和CSS（第二版）</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/JavaScrip/">JavaScrip</a><a href="/tags/workshop2/">workshop2</a>
+  <span></span> <a href="/tags/workshop2/">workshop2</a><a href="/tags/JavaScrip/">JavaScrip</a>
   </div>
 
 
@@ -187,7 +195,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#底部模块问题"><span class="toc-number">1.1.</span> <span class="toc-text">底部模块问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#登录框问题"><span class="toc-number">1.2.</span> <span class="toc-text">登录框问题</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#底部模块问题"><span class="toc-number">1.1.</span> <span class="toc-text">底部模块问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#登录框问题"><span class="toc-number">1.2.</span> <span class="toc-text">登录框问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#收获体会"><span class="toc-number">2.</span> <span class="toc-text">收获体会</span></a></li></ol>
   </div>
 
 <div id="asidepart">
