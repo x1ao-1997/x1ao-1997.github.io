@@ -89,7 +89,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-14T12:32:32.000Z" itemprop="datePublished">2016-10-14</time>
-    更新日期:<time datetime="2016-10-16T01:47:56.357Z" itemprop="dateModified">2016-10-16</time>
+    更新日期:<time datetime="2016-10-16T01:52:19.315Z" itemprop="dateModified">2016-10-16</time>
     
   </p>
 </header>
@@ -99,7 +99,7 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用相关函数"><span class="toc-number">1.</span> <span class="toc-text">常用相关函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用urllib2通过指定的URL抓取网页内容"><span class="toc-number">2.</span> <span class="toc-text">利用urllib2通过指定的URL抓取网页内容</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用相关函数"><span class="toc-number">1.</span> <span class="toc-text">常用相关函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用urllib2通过指定的URL抓取网页内容"><span class="toc-number">2.</span> <span class="toc-text">利用urllib2通过指定的URL抓取网页内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常的处理和HTTP状态码的分类"><span class="toc-number">3.</span> <span class="toc-text">异常的处理和HTTP状态码的分类</span></a></li></ol>
 		</div>
 		
 		<ul>
@@ -143,7 +143,7 @@ the_page = response.read()  #读取反馈的内容
 <p>url = ‘<a href="http://www.someserver.com/cgi-bin/register.cgi" target="_blank" rel="external">http://www.someserver.com/cgi-bin/register.cgi</a>‘  </p>
 <p>user_agent = ‘Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)’<br>values = {‘name’ : ‘WHY’,<br>          ‘location’ : ‘SDU’,<br>          ‘language’ : ‘Python’ }    </p>
 <p>headers = { ‘User-Agent’ : user_agent }<br>data = urllib.urlencode(values)<br>req = urllib2.Request(url, data, headers)<br>response = urllib2.urlopen(req)<br>the_page = response.read()</p>
-<blockquote>
+<h3 id="异常的处理和HTTP状态码的分类"><a href="#异常的处理和HTTP状态码的分类" class="headerlink" title="异常的处理和HTTP状态码的分类"></a>异常的处理和HTTP状态码的分类</h3><blockquote>
 </blockquote>
   
 	</div>
@@ -211,7 +211,7 @@ the_page = response.read()  #读取反馈的内容
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用相关函数"><span class="toc-number">1.</span> <span class="toc-text">常用相关函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用urllib2通过指定的URL抓取网页内容"><span class="toc-number">2.</span> <span class="toc-text">利用urllib2通过指定的URL抓取网页内容</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#常用相关函数"><span class="toc-number">1.</span> <span class="toc-text">常用相关函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#利用urllib2通过指定的URL抓取网页内容"><span class="toc-number">2.</span> <span class="toc-text">利用urllib2通过指定的URL抓取网页内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#异常的处理和HTTP状态码的分类"><span class="toc-number">3.</span> <span class="toc-text">异常的处理和HTTP状态码的分类</span></a></li></ol>
   </div>
 
 <div id="asidepart">
