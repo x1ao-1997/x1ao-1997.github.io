@@ -89,7 +89,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-14T12:32:32.000Z" itemprop="datePublished">2016-10-14</time>
-    更新日期:<time datetime="2016-10-16T01:03:48.033Z" itemprop="dateModified">2016-10-16</time>
+    更新日期:<time datetime="2016-10-16T01:34:16.486Z" itemprop="dateModified">2016-10-16</time>
     
   </p>
 </header>
@@ -120,7 +120,27 @@
 <li>group：</li>
 </ul>
 <h3 id="利用urllib2通过指定的URL抓取网页内容"><a href="#利用urllib2通过指定的URL抓取网页内容" class="headerlink" title="利用urllib2通过指定的URL抓取网页内容"></a>利用urllib2通过指定的URL抓取网页内容</h3><blockquote>
-<p>import urllib2<br>response = urllib2.urlopen(‘<a href="http://www.baidu.com/" target="_blank" rel="external">http://www.baidu.com/</a>‘)<br>html = response.read()<br>print html  </p>
+<p>使用urllib2这个组件来抓取网页<br>import urllib2<br>response = urllib2.urlopen(‘<a href="http://www.baidu.com/" target="_blank" rel="external">http://www.baidu.com/</a>‘)<br>html = response.read()<br>print html  </p>
+<p>发送data表单数据<br>    import urllib<br>    import urllib2    </p>
+<pre><code>url = &apos;http://www.someserver.com/register.cgi&apos;    
+
+values = {&apos;name&apos; : &apos;WHY&apos;,    
+          &apos;location&apos; : &apos;SDU&apos;,    
+          &apos;language&apos; : &apos;Python&apos; }    
+
+data = urllib.urlencode(values) # 编码工作  
+req = urllib2.Request(url, data)  # 发送请求同时传data表单  
+response = urllib2.urlopen(req)  #接受反馈的信息  
+the_page = response.read()  #读取反馈的内容  
+</code></pre></blockquote>
+<p><input name="type" id="RadioGroup1_1" type="radio" checked="checked" value="xs"></p>
+<blockquote>
+<p>import urllib2<br>import urllib  </p>
+<p>data = {}  </p>
+<p>data[‘name’] = ‘WHY’<br>data[‘location’] = ‘SDU’<br>data[‘language’] = ‘Python’  </p>
+<p>url_values = urllib.urlencode(data)<br>print url_values  </p>
+<p>name=Somebody+Here&amp;language=Python&amp;location=Northampton<br>url = ‘<a href="http://www.example.com/example.cgi" target="_blank" rel="external">http://www.example.com/example.cgi</a>‘<br>full_url = url + ‘?’ + url_values  </p>
+<p>data = urllib2.open(full_url) </p>
 </blockquote>
   
 	</div>
