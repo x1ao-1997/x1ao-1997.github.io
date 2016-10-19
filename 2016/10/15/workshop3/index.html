@@ -9,8 +9,7 @@
     
     <meta name="author" content="xiao ying">
     
-    <meta name="description" content="遇到的问题
-运行时出现：SyntaxError: Non-ASCII character ‘\xe9’ in file C:/Users/94012/PycharmProjects/untitled/test.py on line 8, but no encoding declared;错误原因：P">
+    <meta name="description" content="这次作业应该算是这几次中最为艰辛的，学习python基础用法的同时还要学习python的各种库，在使用的同时还涉及到了html、css中的知识，在数据爬取的过程中遇到了不少的问题。虽然很多都是小问题，但是由于找不到解决办法，程序无法进行下去耗费了我不少的时间。遇到的一些简单问题如下：1.写入中文运行">
     
     
     
@@ -86,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-15T01:44:20.000Z" itemprop="datePublished">2016-10-15</time>
-    更新日期:<time datetime="2016-10-19T05:33:47.111Z" itemprop="dateModified">2016-10-19</time>
+    更新日期:<time datetime="2016-10-19T13:14:29.856Z" itemprop="dateModified">2016-10-19</time>
     
   </p>
 </header>
@@ -96,22 +95,26 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">遇到的问题</span></a></li></ol>
+		
 		</div>
 		
-		<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
-<li>运行时出现：SyntaxError: Non-ASCII character ‘\xe9’ in file C:/Users/94012/PycharmProjects/untitled/test.py on line 8, but no encoding declared;<br>错误原因：Python的默认编码文件是用的ASCII码<br>解决办法：在文件开头加入 # – coding: UTF-8 – 或者 #coding=utf-8 </li>
-<li>登录密码错误超过三次将出现验证码<br>待解决！！！！！！！！！！</li>
-<li>运行时出现：selenium.common.exceptions.WebDriverException: Message: The browser appears to have exited<br>错误原因：当时使用的是Firefox，查询发现selenium的版本不能支持最新版本Firefox<br>解决办法1：将浏览器版本降下来<br>解决办法2：我直接改用PhantomJS</li>
-<li>用BeautifulSoup，select时出现提示 NotImplementedError: Only the following pseudo-classes are implemented: nth-of-type.<br>错误原因：要求使用它的格式nth-of-type<br>解决办法：将Chrome的copyselector得到的&gt; td:nth-child(3) &gt;  中的nth-child改为nth-of-type</li>
-<li>打印出的中文为乱码 <a href="3D计算机视觉前沿技术(JD"><div>3D\u8ba1\u7b97\u673a\u89c6\u89c9\u524d\u6cbf\u6280\u672f(JD)</div></a>)<br>解决办法：print u’a’   print “%s” % (course_name)  print course_name.decode(‘utf-8’)都没用！！！！</li>
-<li>credGPA = float(cred)*float(col)<br>ValueError: could not convert string to float:</li>
-</ul>
-<p>** 参考网页<br>Python3 标准库概览   [<a href="http://www.runoob.com/python3/python3-stdlib.html" target="_blank" rel="external">http://www.runoob.com/python3/python3-stdlib.html</a>]</p>
+		<p>这次作业应该算是这几次中最为艰辛的，学习python基础用法的同时还要学习python的各种库，在使用的同时还涉及到了html、css中的知识，在数据爬取的过程中遇到了不少的问题。虽然很多都是小问题，但是由于找不到解决办法，程序无法进行下去耗费了我不少的时间。<br>遇到的一些简单问题如下：<br>1.写入中文运行时出现：<br>SyntaxError: Non-ASCII character ‘\xe9’ in file C:/Users/94012/PycharmProjects/untitled/test.py on line 8, but no encoding declared;<br>错误原因：Python的默认编码文件是用的ASCII码<br>解决办法：在文件开头加入 # – coding: UTF-8 – 或者 #coding=utf-8<br>2.运行时出现：<br>selenium.common.exceptions.WebDriverException: Message: The browser appears to have exited<br>错误原因：当时使用的是Firefox，查询发现selenium的版本不能支持最新版本Firefox<br>解决办法1：将浏览器版本降下来<br>解决办法2：我直接改用PhantomJS<br>3.用BeautifulSoup，select时出现提示：<br>NotImplementedError: Only the following pseudo-classes are implemented: nth-of-type.<br>错误原因：要求使用它的格式nth-of-type<br>解决办法：将Chrome的copyselector得到的&gt; td:nth-child(3) &gt;  中的nth-child改为nth-of-type<br>4.打印出的中文为乱码（实际应该是3D计算机视觉前沿技术(JD)）：<br> [<div>3D\u8ba1\u7b97\u673a\u89c6\u89c9\u524d\u6cbf\u6280\u672f(JD)</div>]<br>解决办法：先用decode(‘utf-8’))解码</p>
+<p>下面谈谈爬取数据过程中的一些主要步骤<br>1.指定打开的网页链接、加载PhantomJS驱动、链接到指定网页、设置最大的等待时间<br>2.提取标签元素（用户名、密码、身份）并登录（也可以通过name等抓取）<br>drive.find_element_by_id(“textfield”).send_keys(‘0121510870235’)<br>drive.find_element_by_id(“textfield2”).send_keys(‘嘿嘿嘿’)<br>drive.find_element_by_id(“RadioGroup1_1”).click()<br>drive.find_element_by_id(‘imageField’).submit()<br>3.提取标签元素（成绩查询、历史成绩）点击进入<br>4.选择学年、学期（由于我们现在才大二下学期，不选择结果也并不会出错）点击查询<br>5.因为我总共成绩条数是24而默认只显示20条所以我必须要进行如下操作之一：<br>①选择显示条数：<br>这应该是困扰我最久的问题了，因为在提取标签元素是很多元素都是重名的，造成了提取的困难。<br>②进行翻页<br>这也并不是一条容易走的路&gt;”&lt;<br>6.使用BeautifulSoup提取有关成绩的信息（课程名、学分、成绩、绩点）计算学分绩点（学分<em>绩点）、总学分、总绩点、平均学分绩点并将其保存到excel文件中<br>方法如下：<br>!](<a href="https://ooo.0o0.ooo/2016/10/19/5807717fa5456.png" target="_blank" rel="external">https://ooo.0o0.ooo/2016/10/19/5807717fa5456.png</a>)<br>①用BeautifulSoup抓取成绩表格中的信息（采用这一种）<br>②用BS的Soup.find_all(‘标签’)提取<br>  或用Soup.Select(‘selectoe_path’)(selectoe_path可通过chrom浏览器右键copy 中的copy<br>  selector找到 注意一定要把 td:nth-child改为它要求的格式nth-of-type 以及如果抓取的时<br>  候是借助id=“undefined”是 复制下来最开始的#undefined &gt;需要删除)<br>  或使用正则表达式<br>③Excel读写<br>  使用for循环嵌套将有关信息写入excel并计算<br>  计算时，由于使用了.String的方式读取了标签内的内容，所以计算时需要将string转换成<br>  Float<br>  提供两种方法：<br>  Ⅰ运用函数string.atof(‘’) (使用这一种)<br>  Ⅱ另外定义一个函数<br>    def str2float(s):<br>        return reduce(lambda x,y:x+int2dec(y),map(str2int,s.split(‘.’)))<br>    def char2num(s):<br>      return {‘0’:0,’1’:1,’2’:2,’3’:3,’4’:4,’5’:5,’6’:6,’7’:7,’8’:8,’9’:9}[s]<br>    def str2int(s):<br>      return reduce(lambda x,y:x</em>10+y,map(char2num,s))<br>    def intLen(i):<br>      return len(‘%d’%i)<br>    def int2dec(i):<br>      return i/(10.0<strong>intLen(i))<br>④输出成绩，保存excel
+</strong> 参考网页<br>Python3 标准库概览   [<a href="http://www.runoob.com/python3/python3-stdlib.html" target="_blank" rel="external">http://www.runoob.com/python3/python3-stdlib.html</a>]</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/workshop/">workshop</a><a href="/tags/python/">python</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="../../../../categories/python/">python</a>
+</div>
 
 
 
@@ -166,7 +169,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">遇到的问题</span></a></li></ol>
+  
   </div>
 
 <div id="asidepart">
@@ -191,6 +194,8 @@
 		
 			<li><a href="/categories/github/" title="github">github<sup>1</sup></a></li>
 		
+			<li><a href="/categories/python/" title="python">python<sup>1</sup></a></li>
+		
 		</ul>
 </div>
 
@@ -208,7 +213,9 @@
 		
 			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
 		
-			<li><a href="/tags/workshop/" title="workshop">workshop<sup>1</sup></a></li>
+			<li><a href="/tags/python/" title="python">python<sup>1</sup></a></li>
+		
+			<li><a href="/tags/workshop/" title="workshop">workshop<sup>2</sup></a></li>
 		
 			<li><a href="/tags/workshop2/" title="workshop2">workshop2<sup>1</sup></a></li>
 		
