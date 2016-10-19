@@ -85,7 +85,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-10-15T01:44:20.000Z" itemprop="datePublished">2016-10-15</time>
-    更新日期:<time datetime="2016-10-19T13:23:14.919Z" itemprop="dateModified">2016-10-19</time>
+    更新日期:<time datetime="2016-10-19T14:06:53.175Z" itemprop="dateModified">2016-10-19</time>
     
   </p>
 </header>
@@ -111,7 +111,7 @@
 <li>提取标签元素（成绩查询、历史成绩）点击进入</li>
 <li>选择学年、学期（由于我们现在才大二下学期，不选择结果也并不会出错）点击查询</li>
 <li>因为我总共成绩条数是24而默认只显示20条所以我必须要进行如下操作之一：<br>①选择显示条数：<br>这应该是困扰我最久的问题了，因为在提取标签元素是很多元素都是重名的，造成了提取的困难。<br>②进行翻页<br>这也并不是一条容易走的路&gt;”&lt;</li>
-<li>使用BeautifulSoup提取有关成绩的信息（课程名、学分、成绩、绩点）计算学分绩点（学分*绩点）、总学分、总绩点、平均学分绩点并将其保存到excel文件中<br>方法如下：<br><img src="https://ooo.0o0.ooo/2016/10/19/5807717fa5456.png" alt=""><br>①用BeautifulSoup抓取成绩表格中的信息（采用这一种）<br>②用BS的Soup.find_all(‘标签’)提取<br>或用Soup.Select(‘selectoe_path’)(selectoe_path可通过chrom浏览器右键copy 中的copy<br>selector找到 注意一定要把 td:nth-child改为它要求的格式nth-of-type 以及如果抓取的时<br>候是借助id=“undefined”是 复制下来最开始的#undefined &gt;需要删除)<br>或使用正则表达式<br>③Excel读写<br>使用for循环嵌套将有关信息写入excel并计算<br>计算时，由于使用了.String的方式读取了标签内的内容，所以计算时需要将string转换成<br>Float<br>提供两种方法：<br>Ⅰ运用函数string.atof(‘’) (使用这一种)<br>Ⅱ另外定义一个函数<br>  def str2float(s):<pre><code>return reduce(lambda x,y:x+int2dec(y),map(str2int,s.split(&apos;.&apos;)))
+<li>使用BeautifulSoup提取有关成绩的信息（课程名、学分、成绩、绩点）计算学分绩点（学分*绩点）、总学分、总绩点、平均学分绩点并将其保存到excel文件中<br>方法如下：<br><img src="https://ooo.0o0.ooo/2016/10/19/5807717fa5456.png" alt=""><br>①用BeautifulSoup抓取成绩表格中的信息（采用这一种）<br>②用BS的Soup.find_all(‘标签’)提取或用Soup.Select(‘selectoe_path’)(selectoe_path可通过chrom浏览器右键copy 中的copyselector找到 注意一定要把 td:nth-child改为它要求的格式nth-of-type 以及如果抓取的时候是借助id=“undefined”是 复制下来最开始的#undefined &gt;需要删除)或使用正则表达式<br>③Excel读写<br>使用for循环嵌套将有关信息写入excel并计算<br>计算时，由于使用了.String的方式读取了标签内的内容，所以计算时需要将string转换成Float<br>提供两种方法：<br>Ⅰ运用函数string.atof(‘’) (使用这一种)<br>Ⅱ另外定义一个函数<br>  def str2float(s):<pre><code>return reduce(lambda x,y:x+int2dec(y),map(str2int,s.split(&apos;.&apos;)))
 </code></pre>  def char2num(s):<pre><code>return {&apos;0&apos;:0,&apos;1&apos;:1,&apos;2&apos;:2,&apos;3&apos;:3,&apos;4&apos;:4,&apos;5&apos;:5,&apos;6&apos;:6,&apos;7&apos;:7,&apos;8&apos;:8,&apos;9&apos;:9}[s]
 </code></pre>  def str2int(s):<pre><code>return reduce(lambda x,y:x*10+y,map(char2num,s))
 </code></pre>  def intLen(i):<pre><code>return len(&apos;%d&apos;%i)
