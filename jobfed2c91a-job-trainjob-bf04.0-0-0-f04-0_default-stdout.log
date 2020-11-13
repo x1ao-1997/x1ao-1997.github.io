@@ -1,0 +1,791 @@
+do nothing
+[Modelarts Service Log]user: uid=1101(work) gid=1101(work) groups=1101(work),1000(HwHiAiUser)
+[Modelarts Service Log]pwd: /home/work
+[Modelarts Service Log]app_url: s3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/
+[Modelarts Service Log]boot_file: models/official/detection/main.py
+[Modelarts Service Log]log_url: /tmp/log/trainjob-bf04.log
+[Modelarts Service Log]command: models/official/detection/main.py --data_url=s3://obs-bucket-x1ao1997-bj4/data/ --train_url=s3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/official/detection/model/V0010/
+[Modelarts Service Log]local_code_dir: 
+[Modelarts Service Log][modelarts_create_log] modelarts-pipe found
+[Modelarts Service Log]handle inputs of training job
+INFO:root:Using MoXing-v1.17.3-8aa951bc
+INFO:root:Using OBS-Python-SDK-3.20.7
+[ModelArts Service Log]INFO: env MA_INPUTS is not found, skip the inputs handler
+INFO:root:Using MoXing-v1.17.3-8aa951bc
+INFO:root:Using OBS-Python-SDK-3.20.7
+[ModelArts Service Log]2020-11-13 02:23:31,750 - modelarts-downloader.py[line:612] - INFO: Main: modelarts-downloader starting with Namespace(dst='./', recursive=True, skip_creating_dir=False, src='s3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/', trace=False, type='common', verbose=False)
+[Modelarts Service Log][modelarts_logger] modelarts-pipe found
+/home/work/user-job-dir
+[Modelarts Service Log][modelarts_logger] modelarts-pipe found
+[Modelarts Service Log]2020-11-13 02:23:44,002 - INFO - Davinci training command
+[Modelarts Service Log]2020-11-13 02:23:44,002 - INFO - ['/usr/bin/python', '/home/work/user-job-dir/models/official/detection/main.py', '--data_url=s3://obs-bucket-x1ao1997-bj4/data/', '--train_url=s3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/official/detection/model/V0010/']
+[Modelarts Service Log]2020-11-13 02:23:44,003 - INFO - Wait for Rank table file ready
+[Modelarts Service Log]2020-11-13 02:23:44,003 - INFO - Rank table file (K8S generated) is ready for read
+[Modelarts Service Log]2020-11-13 02:23:44,003 - INFO - 
+{
+    "status": "completed",
+    "group_count": "1",
+    "group_list": [
+        {
+            "group_name": "job-trainjob-bf04",
+            "device_count": "1",
+            "instance_count": "1",
+            "instance_list": [
+                {
+                    "pod_name": "jobfed2c91a-job-trainjob-bf04-0",
+                    "server_id": "192.168.0.230",
+                    "devices": [
+                        {
+                            "device_id": "2",
+                            "device_ip": "192.3.147.243"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+[Modelarts Service Log]2020-11-13 02:23:44,004 - INFO - Rank table file (C7x)
+[Modelarts Service Log]2020-11-13 02:23:44,004 - INFO - 
+{
+    "status": "completed",
+    "version": "1.0",
+    "server_count": "1",
+    "server_list": [
+        {
+            "server_id": "192.168.0.230",
+            "device": [
+                {
+                    "device_id": "2",
+                    "device_ip": "192.3.147.243",
+                    "rank_id": "0"
+                }
+            ]
+        }
+    ]
+}
+[Modelarts Service Log]2020-11-13 02:23:44,004 - INFO - Rank table file (C7x) is generated
+[Modelarts Service Log]2020-11-13 02:23:44,004 - INFO - Slogd startup
+[Modelarts Service Log]2020-11-13 02:23:44,007 - INFO - Current server
+[Modelarts Service Log]2020-11-13 02:23:44,007 - INFO - 
+{
+    "server_id": "192.168.0.230",
+    "device": [
+        {
+            "device_id": "2",
+            "device_ip": "192.3.147.243",
+            "rank_id": "0"
+        }
+    ]
+}
+[Modelarts Service Log]2020-11-13 02:23:44,008 - INFO - FMK of device2 startup
+INFO:root:Using MoXing-v1.17.3-8aa951bc
+INFO:root:Using OBS-Python-SDK-3.20.7
+INFO:root:CUDA_VISIBLE_DEVICES is not used in NPU device.
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/__init__.py:53: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/__init__.py:53: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/utils/tf_util.py:38: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Using TensorFlow-unknown
+INFO:root:Exclude PIL from TF AutoGraph
+INFO:root:Exclude http from TF AutoGraph
+INFO:root:Exclude httplib from TF AutoGraph
+INFO:root:Exclude moxing from TF AutoGraph
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/utils/learn_tools.py:372: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/ops/horovod_ops.py:142: The name tf.train.SessionRunHook is deprecated. Please use tf.estimator.SessionRunHook instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_wrapper.py:123: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_factory.py:61: The name tf.train.AdadeltaOptimizer is deprecated. Please use tf.compat.v1.train.AdadeltaOptimizer instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_factory.py:62: The name tf.train.AdagradOptimizer is deprecated. Please use tf.compat.v1.train.AdagradOptimizer instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_factory.py:65: The name tf.train.FtrlOptimizer is deprecated. Please use tf.compat.v1.train.FtrlOptimizer instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_factory.py:66: The name tf.train.MomentumOptimizer is deprecated. Please use tf.compat.v1.train.MomentumOptimizer instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_factory.py:67: The name tf.train.RMSPropOptimizer is deprecated. Please use tf.compat.v1.train.RMSPropOptimizer instead.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/optimizer/optimizer_factory.py:68: The name tf.train.GradientDescentOptimizer is deprecated. Please use tf.compat.v1.train.GradientDescentOptimizer instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /usr/local/ma/python3.7/lib/python3.7/site-packages/moxing/tensorflow/nets/mobilenet/mobilenet.py:404: The name tf.nn.avg_pool is deprecated. Please use tf.nn.avg_pool2d instead.
+
+已检测到pycocotools模块           ok
+INFO:matplotlib.font_manager:generated new fontManager
+INFO:absl:Building NAS-FPN block specs: [(4, 'attention', (1, 3), False), (4, 'sum', (1, 5), False), (3, 'sum', (0, 6), True), (4, 'sum', (6, 7), True), (5, 'attention', (7, 8), True), (7, 'attention', (6, 9), True), (6, 'attention', (9, 10), True)]
+INFO:absl:Building SpineNet block specs: [(2, 'bottleneck', (0, 1), False), (4, 'residual', (0, 1), False), (3, 'bottleneck', (2, 3), False), (4, 'bottleneck', (2, 4), False), (6, 'residual', (3, 5), False), (4, 'bottleneck', (3, 5), False), (5, 'residual', (6, 7), False), (7, 'residual', (6, 8), False), (5, 'bottleneck', (8, 9), False), (5, 'bottleneck', (8, 10), False), (4, 'bottleneck', (5, 10), True), (3, 'bottleneck', (4, 10), True), (5, 'bottleneck', (7, 12), True), (7, 'bottleneck', (5, 14), True), (6, 'bottleneck', (12, 14), True)]
+INFO:absl:Building SpineNet block specs: [(2, 'bottleneck', (0, 1), False), (4, 'residual', (0, 1), False), (3, 'bottleneck', (2, 3), False), (4, 'bottleneck', (2, 4), False), (6, 'residual', (3, 5), False), (4, 'bottleneck', (3, 5), False), (5, 'residual', (6, 7), False), (7, 'residual', (6, 8), False), (5, 'bottleneck', (8, 9), False), (5, 'bottleneck', (8, 10), False), (4, 'bottleneck', (5, 10), True), (3, 'bottleneck', (4, 10), True), (5, 'bottleneck', (7, 12), True), (7, 'bottleneck', (5, 14), True), (6, 'bottleneck', (12, 14), True)]
+INFO:absl:Building SpineNet block specs: [(2, 'mbconv', (0, 1), False), (2, 'mbconv', (1, 2), False), (4, 'mbconv', (1, 2), False), (3, 'mbconv', (3, 4), False), (4, 'mbconv', (3, 5), False), (6, 'mbconv', (4, 6), False), (4, 'mbconv', (4, 6), False), (5, 'mbconv', (7, 8), False), (7, 'mbconv', (7, 9), False), (5, 'mbconv', (9, 10), False), (5, 'mbconv', (9, 11), False), (4, 'mbconv', (6, 11), True), (3, 'mbconv', (5, 11), True), (5, 'mbconv', (8, 13), True), (7, 'mbconv', (6, 15), True), (6, 'mbconv', (13, 15), True)]
+INFO:absl:Building SpineNet block specs: [(2, 'mbconv', (0, 1), False), (2, 'mbconv', (1, 2), False), (4, 'mbconv', (1, 2), False), (3, 'mbconv', (3, 4), False), (4, 'mbconv', (3, 5), False), (6, 'mbconv', (4, 6), False), (4, 'mbconv', (4, 6), False), (5, 'mbconv', (7, 8), False), (7, 'mbconv', (7, 9), False), (5, 'mbconv', (9, 10), False), (5, 'mbconv', (9, 11), False), (4, 'mbconv', (6, 11), True), (3, 'mbconv', (5, 11), True), (5, 'mbconv', (8, 13), True), (7, 'mbconv', (6, 15), True), (6, 'mbconv', (13, 15), True)]
+I1113 02:23:50.814087 281473010229264 main.py:142] ===============================main=============1 params = factory.config_generator('mask_rcnn')
+I1113 02:23:50.816188 281473010229264 main.py:144] ===============================main=============2 params = factory.config_generator('mask_rcnn')
+===============main=======================148==========
+====main===Model Parameters: %s {'anchor': {'anchor_size': 8,
+            'aspect_ratios': [1.0, 2.0, 0.5],
+            'num_scales': 1},
+ 'architecture': {'backbone': 'spinenet',
+                  'include_mask': True,
+                  'mask_target_size': 28,
+                  'max_level': 7,
+                  'min_level': 3,
+                  'multilevel_features': 'fpn',
+                  'num_classes': 91,
+                  'parser': 'maskrcnn_parser',
+                  'space_to_depth_block_size': 1,
+                  'use_bfloat16': False},
+ 'batch_norm_activation': {'activation': 'relu',
+                           'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True,
+                           'use_sync_bn': False},
+ 'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+ 'enable_summary': False,
+ 'eval': {'eval_batch_size': 2,
+          'eval_dataset_type': 'tfrecord',
+          'eval_file_pattern': 's3://obs-bucket-x1ao1997-bj4/data/COCO/result/part_val/*.tfrecord',
+          'eval_samples': None,
+          'eval_timeout': None,
+          'min_eval_interval': 18,
+          'num_steps_per_eval': 100,
+          'per_category_metrics': False,
+          'skip_eval_loss': False,
+          'type': 'box_and_mask',
+          'use_json_file': True,
+          'val_json_file': 's3://obs-bucket-x1ao1997-bj4/data/COCO/annotations/instances_val2017.json'},
+ 'fpn': {'fpn_feat_dims': 256,
+         'use_batch_norm': True,
+         'use_separable_conv': False},
+ 'frcnn_box_loss': {'huber_loss_delta': 1.0},
+ 'frcnn_head': {'fc_dims': 1024,
+                'num_convs': 0,
+                'num_fcs': 2,
+                'num_filters': 256,
+                'use_batch_norm': False,
+                'use_separable_conv': False},
+ 'isolate_session_state': False,
+ 'mask_sampling': {'num_mask_samples_per_image': 128},
+ 'maskrcnn_parser': {'aug_rand_hflip': True,
+                     'aug_scale_max': 1.0,
+                     'aug_scale_min': 1.0,
+                     'mask_crop_size': 112,
+                     'max_num_instances': 100,
+                     'output_size': [1024, 1024],
+                     'rpn_batch_size_per_im': 256,
+                     'rpn_fg_fraction': 0.5,
+                     'rpn_match_threshold': 0.7,
+                     'rpn_unmatched_threshold': 0.3,
+                     'skip_crowd_during_training': True},
+ 'model_dir': 's3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/official/detection/model/V0010/',
+ 'mrcnn_head': {'num_convs': 4,
+                'num_filters': 256,
+                'use_batch_norm': False,
+                'use_separable_conv': False},
+ 'nasfpn': {'block_fn': 'conv',
+            'fpn_feat_dims': 256,
+            'init_drop_connect_rate': None,
+            'num_repeats': 5,
+            'use_separable_conv': False},
+ 'platform': {'eval_master': None,
+              'gcp_project': None,
+              'tpu': None,
+              'tpu_zone': None},
+ 'postprocess': {'apply_nms': True,
+                 'max_total_size': 100,
+                 'nms_iou_threshold': 0.5,
+                 'pre_nms_num_boxes': 1000,
+                 'score_threshold': 0.05,
+                 'use_batched_nms': False},
+ 'predict': {'predict_batch_size': 8},
+ 'resnet': {'init_drop_connect_rate': None, 'resnet_depth': 50},
+ 'roi_proposal': {'rpn_min_size_threshold': 0.0,
+                  'rpn_nms_threshold': 0.7,
+                  'rpn_post_nms_top_k': 1000,
+                  'rpn_pre_nms_top_k': 2000,
+                  'rpn_score_threshold': 0.0,
+                  'test_rpn_min_size_threshold': 0.0,
+                  'test_rpn_nms_threshold': 0.7,
+                  'test_rpn_post_nms_top_k': 1000,
+                  'test_rpn_pre_nms_top_k': 1000,
+                  'test_rpn_score_threshold': 0.0,
+                  'use_batched_nms': False},
+ 'roi_sampling': {'bg_iou_thresh_hi': 0.5,
+                  'bg_iou_thresh_lo': 0.0,
+                  'fg_fraction': 0.25,
+                  'fg_iou_thresh': 0.5,
+                  'mix_gt_boxes': True,
+                  'num_samples_per_image': 512},
+ 'rpn_box_loss': {'huber_loss_delta': 0.1111111111111111},
+ 'rpn_head': {'anchors_per_location': None,
+              'num_convs': 1,
+              'num_filters': 256,
+              'use_batch_norm': False,
+              'use_separable_conv': False},
+ 'rpn_score_loss': {'rpn_batch_size_per_im': 256},
+ 'spinenet': {'init_drop_connect_rate': None,
+              'model_id': '49',
+              'use_native_resize_op': False},
+ 'spinenet_mbconv': {'init_drop_connect_rate': None,
+                     'model_id': '49',
+                     'se_ratio': 0.2,
+                     'use_native_resize_op': False},
+ 'tpu_job_name': None,
+ 'train': {'checkpoint': {'path': '',
+                          'prefix': 'spinenet49',
+                          'skip_variables_regex': ''},
+           'frozen_variable_prefix': None,
+           'gradient_clip_norm': 0.0,
+           'input_partition_dims': None,
+           'iterations_per_loop': 100,
+           'l2_weight_decay': 0.0001,
+           'learning_rate': {'init_learning_rate': 0.08,
+                             'learning_rate_levels': [0.008, 0.0008],
+                             'learning_rate_steps': [15000, 20000],
+                             'type': 'step',
+                             'warmup_learning_rate': 0.0067,
+                             'warmup_steps': 500},
+           'num_cores_per_replica': None,
+           'num_shards': 8,
+           'optimizer': {'momentum': 0.9, 'type': 'momentum'},
+           'regularization_variable_regex': '.*(kernel|weight):0$',
+           'space_to_depth_block_size': 1,
+           'total_steps': 1000,
+           'train_batch_size': 1,
+           'train_dataset_type': 'tfrecord',
+           'train_file_pattern': 's3://obs-bucket-x1ao1997-bj4/data/COCO/result/part_train/*.tfrecord',
+           'transpose_input': True},
+ 'type': 'mask_rcnn',
+ 'use_tpu': False}
+-----------------------modeling/architecture/factory.py-
+--------------------------------------------------------
+level 3 7
+-这里默认已经是 2 6 了！！--------------------
+--------------------------------------------------------
+I1113 02:23:50.823990 281473010229264 main.py:214] ============main.py  2  executor = tpu_executor.TpuExecutor(model_fn, params)
+I1113 02:23:50.825464 281473010229264 tpu_executor.py:145] gpu devices: []
+W1113 02:23:50.884545 281473010229264 cross_device_ops.py:1209] There is non-GPU devices in `tf.distribute.Strategy`, not using nccl allreduce.
+I1113 02:23:50.885055 281473010229264 tpu_executor.py:148] Number of devices: 1
+I1113 02:23:50.885211 281473010229264 tpu_executor.py:151] session_config: allow_soft_placement: true
+
+I1113 02:23:50.887300 281473010229264 npu_estimator.py:365] NPUEstimator init...
+W1113 02:23:50.887956 281473010229264 npu_common.py:178] Warning:job config file does not exist
+I1113 02:23:50.889182 281473010229264 estimator.py:212] Using config: {'iterations_per_loop': 1, 'mix_compile_mode': False, 'enable_data_pre_proc': True, 'is_tailing_optimization': False, '_profiling_config': None, '_precision_mode': None, '_enable_reduce_precision': False, '_variable_format_optimize': True, '_hcom_parallel': False, '_graph_memory_max_size': None, '_variable_memory_max_size': None, '_auto_tune_mode': None, '_dump_config': None, '_stream_max_parallel_num': None, 'horovod_mode': False, 'graph_run_mode': 1, 'op_debug_level': 0, 'enable_scope_fusion_passes': None, 'enable_exception_dump': 0, '_op_select_implmode': None, '_optypelist_for_implmode': None, '_model_dir': 's3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/official/detection/model/V0010/', '_tf_random_seed': None, '_save_summary_steps': 0, '_save_checkpoints_steps': 100, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    optimizers: "pruning"
+    optimizers: "function"
+    optimizers: "constfold"
+    optimizers: "shape"
+    optimizers: "arithmetic"
+    optimizers: "loop"
+    optimizers: "dependency"
+    optimizers: "layout"
+    optimizers: "memory"
+    optimizers: "GradFusionOptimizer"
+    custom_optimizers {
+      name: "NpuOptimizer"
+      parameter_map {
+        key: "enable_data_pre_proc"
+        value {
+          b: true
+        }
+      }
+      parameter_map {
+        key: "enable_dump"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "enable_dump_debug"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "enable_exception_dump"
+        value {
+          i: 0
+        }
+      }
+      parameter_map {
+        key: "enable_reduce_precision"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "graph_run_mode"
+        value {
+          i: 1
+        }
+      }
+      parameter_map {
+        key: "hcom_parallel"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "is_tailing_optimization"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "iterations_per_loop"
+        value {
+          i: 1
+        }
+      }
+      parameter_map {
+        key: "job"
+        value {
+          s: "localhost"
+        }
+      }
+      parameter_map {
+        key: "min_group_size"
+        value {
+          b: true
+        }
+      }
+      parameter_map {
+        key: "mix_compile_mode"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "op_debug_level"
+        value {
+          i: 0
+        }
+      }
+      parameter_map {
+        key: "precision_mode"
+        value {
+          s: "allow_fp32_to_fp16"
+        }
+      }
+      parameter_map {
+        key: "profiling_mode"
+        value {
+          b: false
+        }
+      }
+      parameter_map {
+        key: "profiling_options"
+        value {
+          s: "training_trace"
+        }
+      }
+      parameter_map {
+        key: "task_index"
+        value {
+          i: 0
+        }
+      }
+      parameter_map {
+        key: "use_off_line"
+        value {
+          b: true
+        }
+      }
+      parameter_map {
+        key: "variable_format_optimize"
+        value {
+          b: true
+        }
+      }
+    }
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0xffff64f6ca10>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+I1113 02:23:50.890125 281473010229264 main.py:217] ============main.py  2  executor = tpu_executor.TpuExecutor(model_fn, params)
+I1113 02:23:50.890264 281473010229264 main.py:239] =============main.py         begin train 
+I1113 02:23:51.111179 281473010229264 main.py:241] =============main.py        executor.train 1
+I1113 02:23:51.111552 281473010229264 tpu_executor.py:158] =================================_estimator.train  1
+2020-11-13 02:23:51.124408: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:23:51 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : SpineNet-190/tpu/models/official/detection/model/V0010/checkpoint
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCS4vW6Duq73LpShlsgjMkiXWqh/PMDhD
+x-amz-request-id : 00000175BF6A874B45C7E8A32D7591F8
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+W1113 02:23:51.158161 281473010229264 deprecation.py:323] From /usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+file_pattern: s3://obs-bucket-x1ao1997-bj4/data/COCO/result/part_train/*.tfrecord
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+W1113 02:23:51.202219 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/dataloader/input_reader.py:52: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+W1113 02:23:53.343883 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/dataloader/tf_example_decoder.py:138: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W1113 02:24:08.392880 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/utils/object_detection/ops.py:50: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+I1113 02:24:09.913161 281473010229264 estimator.py:1148] Calling model_fn.
+W1113 02:24:09.918164 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/modeling/architecture/nn_ops.py:387: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2D` instead.
+W1113 02:24:09.919988 281473010229264 deprecation.py:323] From /usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/layers/convolutional.py:424: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W1113 02:24:09.939450 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/modeling/architecture/nn_ops.py:184: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.BatchNormalization instead.  In particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not be used (consult the `tf.keras.layers.batch_normalization` documentation).
+W1113 02:24:09.981428 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/modeling/architecture/spinenet.py:345: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+I1113 02:24:09.986065 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:10.202886 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:10.582543 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:11.058917 281473010229264 nn_blocks.py:64] -----> Building residual block.
+I1113 02:24:11.459291 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:11.990839 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:12.508825 281473010229264 nn_blocks.py:64] -----> Building residual block.
+I1113 02:24:12.854145 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:13.487757 281473010229264 nn_blocks.py:64] -----> Building residual block.
+I1113 02:24:13.917053 281473010229264 nn_blocks.py:64] -----> Building residual block.
+I1113 02:24:14.267870 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:14.697111 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+I1113 02:24:15.153506 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+*****************************************************************modeling-arch-spinenet.py
+block_spec <modeling.architecture.spinenet.BlockSpec object at 0xffff650d0d50>
+block_spec.level 4
+min-max,  3 7
+I1113 02:24:15.589324 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+*****************************************************************modeling-arch-spinenet.py
+block_spec <modeling.architecture.spinenet.BlockSpec object at 0xffff650d0d90>
+block_spec.level 3
+min-max,  3 7
+I1113 02:24:16.134974 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+*****************************************************************modeling-arch-spinenet.py
+block_spec <modeling.architecture.spinenet.BlockSpec object at 0xffff650d0e50>
+block_spec.level 5
+min-max,  3 7
+I1113 02:24:16.695439 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+*****************************************************************modeling-arch-spinenet.py
+block_spec <modeling.architecture.spinenet.BlockSpec object at 0xffff650d0e90>
+block_spec.level 7
+min-max,  3 7
+I1113 02:24:17.254132 281473010229264 nn_blocks.py:137] -----> Building bottleneck block.
+*****************************************************************modeling-arch-spinenet.py
+block_spec <modeling.architecture.spinenet.BlockSpec object at 0xffff650d0f90>
+block_spec.level 6
+min-max,  3 7
+W1113 02:24:21.330942 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/ops/spatial_transform_ops.py:427: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+W1113 02:24:21.620031 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/modeling/architecture/heads.py:244: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$epoch: 1
+=========================================
+foreground_gt_indices: (1, 128)
+foreground_gt_indices_shape: (2,)
+batch_indices: (1, 128)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+--------------------------shape-------------------------------------
+(1, 100, 112, 112) (1, 128, 2)
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+----------------------------****------------------------------------
+(1, 128, 112, 112)
+----------------------------****------------------------------------
+W1113 02:24:21.849961 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/ops/spatial_transform_ops.py:713: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+----------------------------&&&&&------------------------------------
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+W1113 02:24:23.134613 281473010229264 deprecation.py:323] From /cache/user-job-dir/models/official/detection/modeling/architecture/heads.py:364: conv2d_transpose (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.keras.layers.Conv2DTranspose` instead.
+I1113 02:24:23.234895 281473010229264 benchmark_utils.py:33] number of trainable params: 42.715505 M.
+W1113 02:24:23.237467 281473010229264 deprecation.py:323] From /usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/profiler/internal/flops_registry.py:142: tensor_shape_from_node_def_name (from tensorflow.python.framework.graph_util_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.compat.v1.graph_util.tensor_shape_from_node_def_name`
+Parsing Inputs...
+I1113 02:24:25.781357 281473010229264 benchmark_utils.py:41] number of FLOPS (multi-adds) per image: 175.250060 B.
+W1113 02:24:37.947083 281473010229264 module_wrapper.py:139] From /cache/user-job-dir/models/official/detection/modeling/base_model.py:339: The name tf.estimator.tpu.TPUEstimatorSpec is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimatorSpec instead.
+
+I1113 02:24:37.948961 281473010229264 basic_session_run_hooks.py:541] Create CheckpointSaverHook.
+I1113 02:24:37.949275 281473010229264 estimator.py:1150] Done calling model_fn.
+I1113 02:24:46.295281 281473010229264 monitored_session.py:240] Graph was finalized.
+2020-11-13 02:24:46.319313: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:24:46 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : SpineNet-190/tpu/models/official/detection/model/V0010/checkpoint
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCS/z4FV0j1w2s1/eVfRR3amkt4c/XSs/
+x-amz-request-id : 00000175BF6B613F45D155327EFA26B9
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+I1113 02:25:16.471887 281473010229264 session_manager.py:500] Running local_init_op.
+I1113 02:25:17.292061 281473010229264 session_manager.py:502] Done running local_init_op.
+2020-11-13 02:25:23.022981: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSbDuJ2pAh+hADDmWjNTJ4j1Jj7zXoV4
+x-amz-request-id : 00000175BF6BEE4645CB3BE3492B7DC8
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.045535: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSy6TltxfH+GoFLaWdb93hXRNrP0dJsB
+x-amz-request-id : 00000175BF6BEE5D45CB3C4F34530D4D
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.113502: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/data
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSQ9Bo7MLJ6ckxXX7dcHAJsL7aV+mO1a
+x-amz-request-id : 00000175BF6BEE9F44CFE015646CFF41
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.113723: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/annotation
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSp3F+8i12+E45Au0lDM7WRfWcNGE06Q
+x-amz-request-id : 00000175BF6BEEA045CB3E151906F48D
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.129902: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/task
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSASBZf9dzdqSFHktQArlFDs62Wl+xjS
+x-amz-request-id : 00000175BF6BEEAA45CA0890694690EB
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.130235: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/temp
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSqh31kNZ1ZAtlRCvJpauVTgtZMV0Wuo
+x-amz-request-id : 00000175BF6BEEAA45D2623FCACD1826
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.139357: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/annotation
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSamTkz50G67u/54qrrJr4S9H6O0BDki
+x-amz-request-id : 00000175BF6BEEBB45CB3EC6977763AD
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.142847: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/data
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSKiIuZjCiH4R8YCvavnbknMvtLmkfhF
+x-amz-request-id : 00000175BF6BEEB644CFE09B448A8E9C
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.143337: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/logs
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSKUSWquj6F1+h1NcW+gYZlbxFEjD+Dx
+x-amz-request-id : 00000175BF6BEEAE45C7780B503874BD
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.155903: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/task
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSDiJjx+zzg9v/oPfhk1bzaaarmAO+ts
+x-amz-request-id : 00000175BF6BEECA45CA0986B0EDDD7E
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.157751: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/temp
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSnkKPXAhyXg499nnWIsAhkh6w/gVW/6
+x-amz-request-id : 00000175BF6BEECB45D2631E362210CD
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+2020-11-13 02:25:23.173245: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:25:23 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : data/COCO/result/part_train/dataset-coco2017-train-part-qS4zNqNEIrFtpLle4Sr/logs
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSkgSj9nCL5dm4ZDpfNb+hzJKR7yo5xD
+x-amz-request-id : 00000175BF6BEEDC45C779E8382E3132
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+I1113 02:25:49.294299 281473010229264 basic_session_run_hooks.py:606] Saving checkpoints for 0 into s3://obs-bucket-x1ao1997-bj4/SpineNet-190/tpu/models/official/detection/model/V0010/model.ckpt.
+2020-11-13 02:26:06.401702: E tensorflow/core/platform/s3/aws_logging.cc:60] HTTP response code: 404
+Exception name: 
+Error message: No response body.
+9 response headers:
+content-length : 0
+date : Fri, 13 Nov 2020 02:26:06 GMT
+server : OBS
+x-amz-error-code : NoSuchKey
+x-amz-error-detail-key : SpineNet-190/tpu/models/official/detection/model/V0010
+x-amz-error-message : The specified key does not exist.
+x-amz-id-2 : 32AAAQAAEAABAAAQAAEAABAAAQAAEAABCSrUZ5b9YjtT8ph9Aqqxqhdx8mrxZnyi
+x-amz-request-id : 00000175BF6C97B744CFF0A510A12AF4
+x-reserved : amazon, aws and amazon web services are trademarks or registered trademarks of Amazon Technologies, Inc
+Traceback (most recent call last):
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1365, in _do_call
+    return fn(*args)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1350, in _run_fn
+    target_list, run_metadata)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1443, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Ref Tensors (e.g., Variables) are not supported as results: tensor fast_rcnn_head/class-predict/kernel:0, dst is Momentum/update_fast_rcnn_head/class-predict/kernel/ApplyMomentum
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/work/user-job-dir/models/official/detection/main.py", line 288, in <module>
+    tf.app.run(main)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/platform/app.py", line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/absl/app.py", line 300, in run
+    _run_main(main, args)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/absl/app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "/home/work/user-job-dir/models/official/detection/main.py", line 242, in main
+    executor.train(train_input_fn, params.train.total_steps)
+  File "/cache/user-job-dir/models/official/detection/executor/tpu_executor.py", line 159, in train
+    self._estimator.train(input_fn=input_fn, max_steps=steps)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_estimator/python/estimator/estimator.py", line 370, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_estimator/python/estimator/estimator.py", line 1161, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_estimator/python/estimator/estimator.py", line 1195, in _train_model_default
+    saving_listeners)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_estimator/python/estimator/estimator.py", line 1494, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py", line 754, in run
+    run_metadata=run_metadata)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py", line 1259, in run
+    run_metadata=run_metadata)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py", line 1360, in run
+    raise six.reraise(*original_exc_info)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/six.py", line 703, in reraise
+    raise value
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py", line 1345, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py", line 1418, in run
+    run_metadata=run_metadata)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/training/monitored_session.py", line 1176, in run
+    return self._sess.run(*args, **kwargs)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 956, in run
+    run_metadata_ptr)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1180, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1359, in _do_run
+    run_metadata)
+  File "/usr/local/ma/python3.7/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1384, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Ref Tensors (e.g., Variables) are not supported as results: tensor fast_rcnn_head/class-predict/kernel:0, dst is Momentum/update_fast_rcnn_head/class-predict/kernel/ApplyMomentum
+[Modelarts Service Log]2020-11-13 02:26:23,323 - ERROR - FMK of device2 (pid: [365]) has exited with non-zero code: 1
+[Modelarts Service Log]2020-11-13 02:26:23,324 - INFO - Begin destroy FMK processes
+[Modelarts Service Log]2020-11-13 02:26:23,324 - INFO - FMK of device2 (pid: [365]) has exited
+[Modelarts Service Log]2020-11-13 02:26:23,324 - INFO - End destroy FMK processes
+=== begin proc exit    ===
+=== begin stop slogd   ===
+===   end pro exit     ===
+[Modelarts Service Log]Training end with return code: 1
+[Modelarts Service Log]training end at 2020-11-13-02:26:24
+[Modelarts Service Log]Training completed.
